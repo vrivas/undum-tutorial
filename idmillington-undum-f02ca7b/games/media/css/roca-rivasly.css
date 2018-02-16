@@ -1,0 +1,19 @@
+#title {
+    background: #e6e6c6 url("../img/titulo.jpg") no-repeat ;
+		width: 900px;
+		height: 375px;
+		border-width: 0px;
+		max-width: 820px;
+		padding-top: 8em;
+}
+
+.dialogo {
+	font-style: italic;
+	padding-left: 2em;
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+}
+
+.personaje {
+	color: rgb( 80, 80,120 );
+}

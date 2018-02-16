@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="es-es"><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Breve Tutorial Undum | Versión 2012</title>
+
+  
+  
+  <style type="text/css">
+
+body {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  margin-top: 5px;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: 1.5em;
+  text-align: justify;
+  background-image: url(fondo-codigo-tutoriales-0.2.png);
+}
+.contenido {
+  aborder: 1px solid #ccccff;
+  padding: 10px;
+  margin-top: 1cm;
+  background-color: rgba( 255,255,255, 0.4);
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+h2 {
+  border-bottom: 2px solid #ccccff;
+  margin-top: 1.2em;
+}
+p {
+  margin-top: 2em;
+}
+pre {
+  border: 1px dotted #6666ff;
+  padding-left: 7%;
+  margin-left: auto;
+  background-color: #ffffef;
+  padding-right: 5%;
+  margin-right: auto;
+  width: 80%;
+  background-image: url(fondo-codigo-tutoriales-0.1.png);
+  background-repeat: repeat-y;
+}
+.indice {
+  font-size: 80%;
+  line-height: 1.2em;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.indice a:link {
+  text-decoration: none;
+}
+.indice a:hover {
+  text-decoration: underline;
+}
+.indice a:visited {
+  text-decoration: none;
+}
+.destacar {
+  background-color: #ffff66;
+}
+.codigo {
+  font-family: "Courier New",Courier,monospace;
+  font-weight: bold;
+}
+h2 + p:first-letter {
+  padding-left: 0em;
+}
+p:first-letter {
+  padding-left: 2em;
+}
+
+ingles {
+	font-style: italic;
+}
+mipre {
+	white-space: pre;
+}
+  </style>
+  
+  <meta content="Víctor Manuel Rivas Santos" name="author">
+
+  
+  <meta content="Tutorial de Undum." name="description">
+
+</head><body>
+<div class="contenido">
+<h1>Breve Tutorial de Undum <sub>| Versión 2012</sub></h1>
+<div class="indice">
+<h3>Índice</h3>
+<a href="#c1">1. ¿Qué es Undum?</a><br>
+<a href="#c2">2. ¿Qué permite hacer?</a><br>
+<a href="#c3">3. ¿Cuáles son los conceptos más importantes?</a><br>
+<a href="#c4">4. ¿Qué información puedo mostrar?</a><br>
+<a href="#c5">5. ¿Cómo se define el aspecto visual de la página?</a><br>
+<a href="#c6">6. Tipos de enlaces que puedo incluir</a><br>
+<a href="#c7">7. Estructura de ficheros del juego</a><br>
+<a href="#c8">8. El fichero Javascript con la definición del juego</a><br>
+<a href="#c9">9. Breve guía de referencia</a><br>
+
+
+</div>
+<br>
+<br>
+
+<!-- 
+***************************************************************************************************************
+-->
+
+<h2><a name="c1"></a>1. ¿Qué es Undum?</h2>
+<p>
+Undum es un <ingles>framework</ingles> que se ejecuta en un navegador y permite crear juegos interactivos basados en HTML, CSS y Javascript.
+</p>
+<p>
+Está disponible en <a href="http://undum.com/" target="_new">http://undum.com/</a>, desde donde se puede <a href="http://github.com/idmillington/undum" target="_new">descargar el código</a> para
+crear nuevos juegos, así como acceder a <a href="http://undum.com/API.html" target="_new">un manual básico de utilización</a>.
+</p>
+
+
+<!-- 
+***************************************************************************************************************
+-->
+
+<h2><a name="c2"></a>2. ¿Qué permite hacer?</h2>
+<p>
+Mejor que explicártelo, te dejo enlaces a algunos ejemplos y les echamos un vistazo rápido:
+<ul>
+<li><a href="http://undum.com/games/tutorial.en.html" target="_new">Tutorial de Undum</a> realizado por su autor, I D Millington</li>
+<li>Juego <a href="http://eblong.com/zarf/zweb/matter/" target="_new">The Matter of the Monster</a> de Andrew Plotkin</li>
+<li>Juego <a href="http://diden.net/~maga/undum/idmillington-undum-2cd8eac/games/cavity.en.html" target="_new">Cavity of Time</a> de
+"Ed Packer" (ojo que es para mayores de 18 años)</li>
+<li>Juego <a href="http://www.jeremiasbabini.com.ar/leaks/en/"  target="_new">Leaks</a> cuyos autores son Jeremias Babini, Eva Bisceglia y Sebastian Garcia
+</li>
+<li>Juego <a href="http://www.deirdrakiai.com/theplay"  target="_new">The Play</a> escrito por Deirdra Kiai</li>
+</ul>
+</p>
+
+<p>
+Existe una librería que permite mejorar las capacidades multimedia de Undum, dicha librería es <a href="" target="_new">Vorple</a> y el juego
+<a href="http://transcripts.game-testing.org/undum/starborn/" target="_new">Starborn</a> (de Juhana Leinonen) es un ejemplo de lo que se puede hacer con ella.
+</p>
+
+<p>
+Finalmente, si me prometes que seguirás leyendo este tutorial hasta el final, te dejo el enlace al juego que hemos creado para esta ocasión; se llama <a href="./idmillington-undum-f02ca7b/games/Roca-Rivasly.html" target="_new">Roca Rivasly</a> y te puede servir de base para hacer tus propios juegos.
+</p>
+<!-- 
+***************************************************************************************************************
+-->
+<h2><a name="c3"></a>3. ¿Cuáles son los conceptos más importantes?</h2>
+<p>
+Las historias creadas con Undum están pensadas para que haya un personaje (tú) que va interactuando con la pantalla, pasando de unas escenas a otras, recogiendo objetos y modificando con ello su status en el juego.
+</p>
+<p>
+Los tres conceptos que sirven manejarse en Undum son:
+<ul>
+<li>Situaciones</li>
+<li>Acciones</li>
+<li>Propiedades (<ingles>qualities</ingles>)</li>
+</ul>
+</p>
+
+
+<h3>Situaciones</h3>
+<p>
+Cada situación es algo así como una escena, y consta de un contenido que describe dónde estás, qué ves y qué puedes hacer. La situación permite por tanto interactuar con el usuario. En todo momento hay una <strong>situación activa</strong>.
+</p>
+<p>
+El contenido de una situación incluye enlaces a otras situaciones y enlaces a acciones. Los primeros cambian la situación actual por otra; los segundos permiten realizar acciones por parte del personaje.
+</p>
+
+<h3>Acciones</h3>
+<p>
+En cada situación podemos ofrecer, si lo vemos oportuno, acciones que el usuario puede realizar. Una acción no tiene por qué provocar un cambio de situación, aunque puede hacerlo. La elección de una acción por parte del usuario puede generar nuevo contenido en la situación así como aportar nuevas acciones.
+</p>
+<h3>Propiedades (<ingles>qualities</ingles>)</h3>
+
+<p>Son valores que representan el estado de tu personaje, por lo que su valor aparece reflejado en el cuadro que aparece en el juego a la derecha.</p>
+
+<!-- 
+***************************************************************************************************************
+-->
+
+<h2><a name="c4"></a>4. ¿Qué información puedo mostrar?</h2>
+<p>
+Toda la información que se proporciona al usuario está en HTML, aunque tenemos que construirlo correctamente formando lo que denominaremos un <strong>contenido a mostrar</strong> (<ingles>display content</ingles>). Básicamente eso significa que:
+<ul>
+<li>El visor siempre debe comenzar y acabar con una etiqueta válida HTML.</li>
+<li>Las etiquetas deben estar correctamente anidadas y cerradas.</li>
+</ul>
+</p>
+<!-- 
+***************************************************************************************************************
+-->
+
+<h2><a name="c5"></a>5. ¿Cómo se define el aspecto visual de la página?</h2>
+<p>
+Al ser una página web, el aspecto visual lo definiremos con CSS, aunque hay que saber que hay una serie de clases predefinidas que no debemos modificar:
+<ul>
+<li><strong>class="transient"</strong> : Contenido que debe desaparecer al cambiar de situación. Bueno para los párrafos que muestran opciones al usuario, porque desaparecerán al marcar una de ellas.</li>
+<li><strong>class="sticky"</strong>: (válido sólo para acciones) la acción sigue activa al cambiar de situación.</li>
+<li><strong>class="raw"</strong>>: (sólo para enlaces) representa un enlace a una página externa. Podemos combinarlo con <code>sticky</code> si nos hace falta y es conveniente añadir <code>target="_new"</code>.</li>
+<li><strong>class="once"</strong>: (sólo para acciones) desactiva la acción (tantas veces como esté en la situación) una vez ha sido pulsada; nos asegura que sólo podremos pulsarla una vez.</li>
+<li><strong>class="options"</strong>: (sólo para listas ul) muestra una tabla de opciones y desaparece al pinchar en una de ellas.
+</ul>
+</p>
+<p>
+El creador de Undum opina que sólo se debe usar un encabezado a lo largo del juego, por lo que sólo ha predefinido el estilo de H1. No obstante, podemos redefinir nuestros estilos si lo vemos conveniente añadiendo nuestros propios ficheros CSS.
+</p>
+
+
+<!-- 
+***************************************************************************************************************
+-->
+<h2><a name="c6"></a>6. Tipos de enlaces que puedo incluir</h2>
+<p>
+Las situaciones y acciones se incorporan al texto como enlaces, es decir: &lt;a>. Son las más frecuentes aunque el conjunto total de enlaces son:
+<ul>
+	<li>Enlaces a situaciones: <code>situation-id</code>. Cambia la situación activa</li>
+	<li>Enlaces a acciones: <code>./action-id</code>. Lleva a cabo la acción indicada</li>
+	<li>Enlaces combinados: <code>situation-id/action-</code>. Cambian la situación y realizan la acción. Rara vez se usan.</li>
+	<li>Enlaces externos: con <code>class="raw"</code>; Conveniente poner el target apuntando a otra ventana/pestaña</li>
+</ul>
+</p>
+
+
+<!-- 
+***************************************************************************************************************
+-->
+<h2><a name="c7"></a>7. Estructura de ficheros del juego</h2>
+<p>
+Aunque podemos utilizar la estructura que queramos, que para eso es una página web, el autor nos sugiere la siguiente:
+<ul>
+	<li>Cada juego se compone de UN sólo fichero HTML, que a su vez debe incrustar:
+		<ul>
+		<li>La librería jQuery: <code>media/js/jquery-1.4.2.min.js</code></li>
+		<li>El framework Undum: <code>media/js/undum.js</code></li>
+		<li>El fichero Javascript propio del juego: <code>media/js/mijuego.game.js</code></li>
+		<li>Archivo (o archivos) CSS: <code>media/css/undum.css</code></li>
+		</ul>
+	</li>
+</ul>
+</p>
+<p>
+	El propio fichero HTML debe tener una estrutura particular, por eso mejor utilizar la plantilla proporcionada: games/tutorial.en.html
+</p>
+<p>
+El fichero HTML incluye:
+<ul>
+<li>El título del juego</li>
+<li>El panel izquierdo superior con el titulo y el resumen</li>
+<li>El mensaje de copyright. Debemos dejar el relativo a Undum</li>
+<li>La ruta relativa al fichero donde se define el juego (normalmente: <code>media/js/mijuego.games.js</code>)</li>
+</ul>
+</p>
+
+<!-- 
+***************************************************************************************************************
+-->
+<h2><a name="c8"></a>8. El fichero Javascript con la definición del juego</h2>
+<p>
+Como hemos indicado, se suele ubicar en <code>media/js</code> y llamarse algo como <code>nombredeljuego.games.js</code>.
+Este fichero debe proporcionar:
+<ul>
+	<li>Un identificador único (para los datos guardados)</li>
+	<li>Versión dle juego</li>
+	<li>Descripción de todas las situaciones, con sus acciones asociadas</li>
+	<li>La situación de inicio del juego: undum.game.start = situation-id</li>
+	<li>Funciones a las que se llamarán cada vez que se entre o salga de una situación</li>
+	<li>Funciones a las que se llamarán antes o después de llevar a cabo una acción</li>
+</ul>
+</p>
+<p>
+Por supuesto, también debe incorporar todas las propiedades (<ingles>qualities</ingles>):
+<ul>
+<li>Descripciones de cada una de las propiedades del personaje y de cómo se mostrarán</li>
+<li>Definiciones de grupos de propiedades, cuáles deben aparecer en el panel y qué cabeceras deben llevar</li>
+<li>Una función para inicializar las propiedades.</li>
+</ul>
+
+<h3>
+Ejemplos de código:
+</h3>
+<pre class="codigo">
+// LISTA DE SITUACIONES
+undum.game.situations = {
+    doorway: new Situation(...),
+    lobby: new SimpleSituation(...),
+    lobby-upstairs-closed: new MyCustomSituation(...),
+    ... etc ...
+};
+
+
+//GRUPOS DE PROPIEDADES:
+undum.game.qualityGroups = {
+    stats: new QualityGroup(...),
+    clues: new QualityGroup(...),
+    equipment: new QualityGroup(...)
+}
+
+
+// PROPIEDADES:
+undum.game.qualities = {
+    investigation: new IntegerQuality("Investigation", {group:'stats'}),
+    "found-mr-black": new OnOffQuality("Found Mr. Black", {group:'clues'}),
+    ... etc ...
+};
+
+
+// INICIALIZACION:
+undum.game.init = function(character, system) {
+    character.qualities.investigating = 0;
+    character.qualities.money = 100;
+    ... etc ...
+    system.setCharacterText(...);
+};
+
+</pre	>
+
+
+<h3>
+Ejemplos de código de nuestro juego:
+</h3>
+<pre class="codigo">
+
+// Situaciones
+undum.game.situations = {
+start: new undum.SimpleSituation(
+  "&lt;h1>La puerta del castillo&lt;/h1>\
+  &lt;p>Acabas de llegar a Roca Casterly.&lt;/p>", 
+  {
+    enter: function(character, system, from) {
+      system.doLink('santoysenia');
+    }
+  }
+),
+santoysenia: new undum.SimpleSituation (
+  "&lt;p>El castillo está cerrado a cal y canto... \
+  aunque te piden el santo y seña:&lt;/p>\
+  &lt;p class='dialogo'>- ¿Cuánto son 3+4?&lt;/p>\
+  &lt;p>Ante tamaña afrenta tu respuesta podría ser  \
+  &lt;a href='incorrecta01'>que no te has traido la calculadora&lt;/a>, 
+  y también que 3+4 &lt;a href='patiodearmas'>suman 7&lt;/a> \
+  (a juzgar por los 4 dedos levantados de tu mano derecha y\
+   los 3 de la izquierda), aunque tampoco estaría mal confesar que \
+  &lt;a href='incorrecta02'>aquel día no fuiste a la escuela&lt;/a> pues te 
+  quedaste cuidando a tu lobo huargo.&lt;/p>"
+    ),
+// ...
+
+
+// Grupos de propiedades
+
+undum.game.qualityGroups = {
+  inventario: new undum.QualityGroup('Inventario', {priority:"0001"})
+};
+
+// PRopiedades
+
+undum.game.qualities = {
+  antorcha: new undum.OnOffQuality(
+    "Antorcha", {priority:"0001", group:'inventario', onDisplay:"&#10003;"}
+  ),
+  llave: new undum.OnOffQuality(
+    "Llave", {priority:"0002", group:'inventario', onDisplay:"&#10003;"}
+  )
+};
+
+
+// INicialización
+undum.game.init = function(character, system) {
+  system.setQuality( "antorcha" , false )
+  system.setQuality( "llave" , false )
+  system.setCharacterText("&lt;p>¡Comienzas tu fascinante aventura!&lt;/p>");
+};
+</pre>
+
+
+<!-- 
+***************************************************************************************************************
+-->
+<h2><a name="c9"></a>9. Breve guía de referencia</h2>
+
+<p>
+Relatamos algunas de las carcterísticas de los elementos de Undum:
+<ul>
+<li>character: el personaje; hay que crearlo. Contiene <ingles><code>character.qualities</code></ingles>: 
+<mipre>
+
+		* character.qualities.edad; // Acceso
+
+		* character.qualities.edad++; // Modificación si no se muestra en el estado
+
+		* <strong>system</strong>.setQuality('gold', character.qualities.gold+1); // Modificación si se muestara
+
+		* // sandbox: permite guardar cualquier estructura que deseemos, aunque no se muestra al usuario.
+		  character.sandbox.elementos.push( 'pelota' )
+
+</mipre>
+</li>
+
+<li>system: representa la interfaz entre el código y el usuario.
+Contiene:
+<mipre>
+
+		* write(content, [elementSelector])	: escribe nuevo contenido en el flujo de la historia. 
+
+		- El contenido debe ser DOM válido, o una cadena de contenido válido para el contenido a mostrar.
+		- Si proporcionamos elementSelector, se insertará detrás de dicho elemento; si no, detrás de #content
+		  (aunque usando writeBefore) se inserta antes.
+		- Una vez insertado se irá a ese punto, para seguir con la historia 
+      (conveniente establecer jQuery.fx.off=true cuando estemos depurando)
+
+
+		* doLink(URL): sirve para cambiar de situación o realizar una acción desde el código.
+
+		* rnd: objeto para genear de números aleatorios.
+			Incluye: 
+				- random() // [0,1)
+				- randomInt(min, max) // [min, max]
+				- dice(n, dx, plus) // n dados, dx caras, añadiendo plus
+				- aveDice(n, plus) 
+				- diceString(definition) 
+
+		* time: tiempo en segundos que lleva el jugador jugando
+
+		* setQuality ( qualityId, new Value )
+
+		* setCharacterText(content): Texto que aparecerá en el panel del personaje; debe ser tipo DOM o contenido a mostrar
+
+		* clearLinks(URL): Elimina todos los enlaces que haya en la situación
+
+</mipre>
+</li>
+<li>Situation: para crear situaciones.
+Contiene:
+<mipre>
+
+		* new Situation(options): options permite incluir la definición de funciones para enter, act, or exit, 
+		  aunque se pueden especificar después:
+
+			- enter(character, system, from)
+			- exit(character, system, to)
+			- act(character, system, action)
+
+</mipre>
+<br>
+En cualquier caso, es mucho mejor usar SimpleSituation, sobre todo cuando hay varias acciones y hay que hacer un if o switch (o sea, en el 99% de los casos):
+
+<mipre>
+
+	* SimpleSituation: más fácil la salida en pantalla del enter, así como la toma de decisiones en al act; igual para el exit.
+	
+	* new SimpleSituation(content, options)
+		En options pondremos:
+		- heading: Un cabecera que se pondrá "tal cual" (verbatim) en la situación.
+		- enter: función a ejecutar tras llamar al enter por defecto, se hace además lo que aquí indiquemos.
+		- act: función con el comportamiento adicional al método por defecto act. 
+		- exit: como no hay opción por defecto para exit en Situation, esto será lo único que se haga si se define.
+		- actions: Objeto que mapea los identificadores de acciones a las respuestas. 
+		  La respuesta puede ser un contenido a mostrar para escribir en pantalla, o una función que procesará la petición. 
+
+</mipre>
+<pre class="codigo">
+new SimpleSituation(
+    "&lt;p>...content...&lt;/p>",
+    {
+        heading: "Title",
+        actions: {
+            listen: function(character, system, action) {
+                if (character.qualities.hearing > 5) {
+                    system.write("&lt;p>You hear a tinkling inside.&lt;/p>");
+                } else {
+                    system.write("&lt;p>You hear nothing.&lt;/p>");
+                }
+            },
+            search: "&lt;p>You find nothing.&lt;/p>"
+        }
+    }
+);
+</pre>
+
+</li>
+
+<li>
+Definición de propiedades: undum.game.qualities 
+<mipre>
+
+		* QualityDefinition(title, options): no suele usarse, sino sus derivadas.
+	
+			- title: cadena
+			- options: priority (para ordenarlas en el grupo: "00001" ),
+			           group (grupo previamente definido al que pertenece),
+			           extraClasses ()Se añaden al "class" de la propiedad cuando se muestra, por ejemplo para iconos)
+
+
+		* IntegerQuality: Muestra la cualidad como el entero más cercano.
+
+		* NonZeroIntegerQuality: Como la anterior, pero sólo se muestra cuando es distinto de cero.
+
+		* NumericQuality: Muestra el valor como un número real
+
+		* WordScaleQuality(title, words, options):
+
+			- words: vector de cadenas
+			- options: contiene priority, group y extraClasses, y además:
+				- offset: para poder utilizar números negativos en el acceso
+				- useBonuses: por defecto es true indicando que si usamos un índice mayor que el número de palabras, 
+				  se añadirán valos numéricos (fuerte+1, fuerte+2, etc.)
+
+		* FudgeAdjectivesQuality: tiene definidas directamente las palabras "terrible", "poor", 
+		                          "mediocre", "fair", "good", "great" y "superb".
+
+		* OnOffQuality(title, options)
+
+			- onDisplay: permite añadir una marca (como el tic de validado) cuando se muestra la propiedad y 
+			             tiene el valor on.
+
+		* YesNoQuality(title, options)
+	 		- yesDisplay, noDisplay: INdican el valor que se debe mostrar para "yes" y/o para "no".
+
+</li>
+<li>QualityGroup(title, options). Donde options contendrá:
+<mipre>
+
+    - priority: Una cadena indicando el orden en que se visualizará entre todos los grupos. 
+		          Se ordenan alfabéticamente, por lo que es normal indicar algo como: "00001", "00002", etc.
+
+    - extraClasses: Clases adicionales que se añadirán  al div que incluye al grupo.
+
+</mipre>
+</li>
+
+<li>Guardar y cargar:	No guarda los datos sino las acciones, por eso es importante usar sus generadores aleatorios</li>
+<li>Internacionalización:	Sobreescribir las que hay en undum.js metiendo unfichero en lang/es.js y cargándolo después de undum.js</li>
+
+</ul>
+
+
+</ul>
+</p>
+
+<hr>
+(C) Víctor Manuel Rivas Santos<br>
+http://vrivas.es - vrivas@vrivas.es
+</div>
+
+</body></html>

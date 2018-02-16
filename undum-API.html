@@ -1,0 +1,1273 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title></title>
+    <style>
+      body {
+          font: 100%/1.5 sans-serif;
+          margin: 20px;
+      }
+      div#content {
+          margin: 0 auto;
+          width: 960px;
+          overflow: hidden;
+      }
+      #title {
+          padding: 0 10px;
+      }
+      #title h1 {
+          font-weight: normal;
+          text-align: center;
+          margin-bottom: 0.5em;
+          font-size: 2.5em;
+      }
+      #toc {
+          float: left;
+          width: 220px;
+          padding: 0 10px;
+      }
+      #body {
+          float: left;
+          width: 700px;
+          padding: 0 10px;
+      }
+      h1, h2, h3,  h4 {
+          color: #777;
+          margin: 0;
+      }
+      h1 {
+          margin-top: 0.75em;
+          padding-top: 0.75em;
+          color: #900;
+          font-size: 1.6em;
+          border-top: 1px dotted #999;
+      }
+      h1:first-child {
+          border-top: none;
+      }
+      h2 {
+          color: black;
+          font-weight: normal;
+          margin-top: 1.25em;
+          font-size: 1.4em;
+      }
+      h3 {
+          color: #666;
+          font-weight: normal;
+          margin-top: 1em;
+          font-size: 1.3em;
+      }
+      h4 {
+          color: #666;
+          font-weight: normal;
+          margin-top: 0.75em;
+          font-size: 1.2em;
+          list-style-type: square;
+      }
+      h4:before {
+          content: "\25A0";
+          color: #bbb;
+          padding-right: 0.5em;
+      }
+      ul {
+          padding-left: 1.5em;
+      }
+      #toc {
+          padding-top: 2.4em;
+      }
+      ul.toc {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          font-size: 0.9em;
+      }
+      div.header {
+          position: relative;
+      }
+      div.top {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+      }
+      div.top a {
+          text-decoration: none;
+      }
+      li.level_0 { padding-top: 0.5em; font-weight: bold; }
+      li.level_1 { padding-left: 1em; }
+      li.level_2 { padding-left: 2em; }
+      p {
+          margin: 0 0 0.75em 0;
+      }
+      code {
+          font-size: 1.1em;
+      }
+      pre {
+          padding: 10px;
+          background: #eed;
+      }
+      a {
+          color: #900;
+      }
+      #legal {
+          float: left;
+          font-size: 0.75em;
+          padding-left: 250px;
+      }
+      #legal p {
+          margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div id="title">
+        <h1>Undum Documentation: API Documentation</h1>
+      </div>
+      <div id="toc">
+        <ul class="toc">
+          <li class="level_0"><a href="http://undum.com/">Undum Home</a></li>
+        </ul>
+        <h2>Contents</h2>
+        <ul class="toc">
+          
+          <li class="level_0"><a href="#h_1">High Level Overview</a></li>
+          
+          <li class="level_1"><a href="#h_2">Situations</a></li>
+          
+          <li class="level_1"><a href="#h_3">Actions</a></li>
+          
+          <li class="level_1"><a href="#h_4">Qualities</a></li>
+          
+          <li class="level_1"><a href="#h_5">Other Concepts</a></li>
+          
+          <li class="level_0"><a href="#h_6">HTML</a></li>
+          
+          <li class="level_1"><a href="#h_7">Display Content</a></li>
+          
+          <li class="level_1"><a href="#h_8">CSS Styles</a></li>
+          
+          <li class="level_2"><a href="#h_9">Headings</a></li>
+          
+          <li class="level_1"><a href="#h_10">Types of Link</a></li>
+          
+          <li class="level_2"><a href="#h_11">Situation Links</a></li>
+          
+          <li class="level_2"><a href="#h_12">Action Links</a></li>
+          
+          <li class="level_2"><a href="#h_13">Combined Links</a></li>
+          
+          <li class="level_2"><a href="#h_14">External Links</a></li>
+          
+          <li class="level_2"><a href="#h_15">Link Data</a></li>
+          
+          <li class="level_0"><a href="#h_16">File Structure</a></li>
+          
+          <li class="level_1"><a href="#h_17">The HTML File</a></li>
+          
+          <li class="level_1"><a href="#h_18">The Game Definition File</a></li>
+          
+          <li class="level_2"><a href="#h_19">Identifiers</a></li>
+          
+          <li class="level_2"><a href="#h_20">Game ID</a></li>
+          
+          <li class="level_2"><a href="#h_21">Version Number</a></li>
+          
+          <li class="level_2"><a href="#h_22">Situation List</a></li>
+          
+          <li class="level_2"><a href="#h_23">Starting Situation</a></li>
+          
+          <li class="level_2"><a href="#h_24">Qualities</a></li>
+          
+          <li class="level_2"><a href="#h_25">Quality Groups</a></li>
+          
+          <li class="level_2"><a href="#h_26">Initialization Function</a></li>
+          
+          <li class="level_2"><a href="#h_27">Global Event Functions</a></li>
+          
+          <li class="level_0"><a href="#h_28">API Reference</a></li>
+          
+          <li class="level_1"><a href="#h_29">Character</a></li>
+          
+          <li class="level_1"><a href="#h_30">System</a></li>
+          
+          <li class="level_2"><a href="#h_31">Random</a></li>
+          
+          <li class="level_1"><a href="#h_32">Situation</a></li>
+          
+          <li class="level_2"><a href="#h_33">SimpleSituation</a></li>
+          
+          <li class="level_1"><a href="#h_34">QualityDefinition</a></li>
+          
+          <li class="level_2"><a href="#h_35">IntegerQuality</a></li>
+          
+          <li class="level_2"><a href="#h_36">NonZeroIntegerQuality</a></li>
+          
+          <li class="level_2"><a href="#h_37">NumericQuality</a></li>
+          
+          <li class="level_2"><a href="#h_38">WordScaleQuality</a></li>
+          
+          <li class="level_2"><a href="#h_39">FudgeAdjectivesQuality</a></li>
+          
+          <li class="level_2"><a href="#h_40">OnOffQuality</a></li>
+          
+          <li class="level_2"><a href="#h_41">YesNoQuality</a></li>
+          
+          <li class="level_1"><a href="#h_42">QualityGroup</a></li>
+          
+          <li class="level_0"><a href="#h_43">Loading and Saving</a></li>
+          
+          <li class="level_0"><a href="#h_44">Translation and Internationalization</a></li>
+          
+          <li class="level_1"><a href="#h_45">Language Codes</a></li>
+          
+          <li class="level_1"><a href="#h_46">Filename Conventions</a></li>
+          
+          <li class="level_1"><a href="#h_47">API</a></li>
+          
+          <li class="level_0"><a href="#h_48">Changelog</a></li>
+          
+          <li class="level_1"><a href="#h_49">2011-05-27</a></li>
+          
+          <li class="level_1"><a href="#h_50">2011-08-18</a></li>
+          
+        </ul>
+      </div>
+      <div id="body">
+        
+<h1 id="h_1">High Level Overview</h1>
+<p>Undum games area based around three concepts: Situations, Actions and
+Qualities.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_2">Situations</h2></div>
+<p>A situation is a chunk of code that is responsible for adding content
+to the screen and responding to user interaction. All user interaction
+is performed by clicking links in the content.</p>
+<p>Often a link will change the current situation, in which case another
+situation is loaded, can write to the screen, and can begin responding
+to user interaction. When a situation changes, all links that were
+previously available are removed, so that the player can't unfairly go
+back and try alternative options after committing to one. It is
+possible to override this behavior, see the section on 'Sticky',
+below.</p>
+<p>There is always exactly one active situation. These situations, and
+the links between them, form the structure of the game.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_3">Actions</h2></div>
+<p>A situation may offer the player a series of actions to perform. These
+actions are internal to that situation and normally do not cause the
+situation to change. Actions may output more content, including new
+links for the user to select.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_4">Qualities</h2></div>
+<p>Qualities represent the current state of the character. Internally
+they are all numeric values, able to take on any decimal value,
+positive or negative.  They have no meaning to Undum - they are given
+meaning by your code as you perform calculations or make decisions
+based on their value.</p>
+<p>Qualities display themselves to the user through a formatting
+function, which can turn the number into any kind of indicator: a
+progress bar, a symbol, a word, an integer, and so on. So as far as
+the user is concerned, qualities can represent any kind of value.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_5">Other Concepts</h2></div>
+<p>There are a handful of other elements to an Undum game, but they are
+very much in a supporting role. Quality groups allow you to display a
+set of qualities under a common heading; and character text is a short
+chunk of HTML that you can use to summarize a character's qualities,
+or to give hints.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h1 id="h_6">HTML</h1></div>
+<p>All of Undum's output is HTML. This allows you to style your content
+in any way you choose. It also allows you to include rich media into
+your output, such as images, video or audio.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_7">Display Content</h2></div>
+<p>All HTML output should be in a format we call "Display Content" - this
+has particular rules:</p>
+<ul>
+<li>
+<p>Display Content must always start and end with a HTML tag. It may
+  consist of more than one tag internally, however. So we can have the
+  structure: <code>&lt;p&gt;...&lt;/p&gt;&lt;img&gt;</code>, for example, but not <code>some
+  text...&lt;img&gt;</code>.</p>
+</li>
+<li>
+<p>It must be a complete snippet of HTML in its own right. So any tags
+  that represent a range of content must have their closing tags
+  present. So we can do <code>&lt;p&gt;&lt;em&gt;...&lt;/em&gt;&lt;/p&gt;</code>, but not
+  <code>&lt;p&gt;&lt;em&gt;...&lt;/p&gt;</code>.</p>
+</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_8">CSS Styles</h2></div>
+<p>Undum also uses some of HTML's capabilities to control its own
+behavior. In particular, it uses a series of CSS classes to control
+how content behaves.</p>
+<h4><code>class="transient"</code></h4>
+<p>The CSS class <code>transient</code> can be used to mark HTML content that should
+be removed when the user changes their situation. When a situation
+changes, Undum will go back and remove any links from the text
+(leaving the text that was in the link). Any HTML content that has the
+CSS class <code>transient</code> will be completely removed at this time. Undum
+uses a fading animation to show the user this is happening, to avoid
+the user seeing an abrupt disappearance but being unable to work out
+what was removed.</p>
+<p>Any HTML tag can be marked as <code>transient</code>. It is most commonly used on
+a paragraph of text that gives the user a set of options. Undum is
+designed to allow game developers to produce beautiful narratives -
+you don't want that narrative littered by "You could do X, or you
+could do Y." statements. Mark this content as transient, and it will
+not form part of the permanent record.</p>
+<h4><code>class="sticky"</code></h4>
+<p>When you change situations, links in previous situations will be
+removed. This prevents the user backtracking and picking options that
+no longer apply. Sometimes you want links to be available for a longer
+time, however. In this case mark them with the CSS class
+<code>sticky</code>. Sticky only applies to links, so should only be added to
+<code>&lt;a&gt;</code> tags.</p>
+<h4><code>class="raw"</code></h4>
+<p>Links can also have the <code>raw</code> CSS class. This class prevents Undum
+from interpreting the link as an instruction to the game. If you want
+to add a link to an external resource, you can add this class to
+it. Note that raw links are still removed when you change situations,
+so if you want a raw link permanently available, you should also make
+it sticky.</p>
+<p>For some URLs, Undum can guess that the link is supposed to be an
+external link, and will automatically add the <code>raw</code> class for
+you. This isn't perfect, however, and you are better off not relying
+on it. If you have a link that you don't want Undum to capture, always
+use the <code>raw</code> class.</p>
+<h4><code>class="once"</code></h4>
+<p>Although links will be removed when the situation changes, often you
+want to remove them before that, as a result of an action within the
+current situation. There is an API tool available to do that in your
+code.</p>
+<p>For convenience, there is also the <code>once</code> CSS class. Adding this to a
+link means that the link will be removed as soon as it is
+clicked. This is mostly useful for action links, because a link that
+changes the situation will automatically cause previous links to
+disappear.</p>
+<p>Note that once is smart about this removal. It removes all links to
+the same action, not just the link that was clicked. So if you have
+the same action available in two links in your content, both will be
+removed.</p>
+<h4><code>class="options"</code></h4>
+<p>The options class only works on an unordered list. The default CSS
+also styles this differently. The list items will be presented as
+options within a table of choices. On devices with a mouse or pointer,
+the rows will change color when they are hovered over. The player can
+click anywhere on the row and the first link that it contains will be
+executed.</p>
+<p>This class is intended for smarter presentation of standard option
+blocks, if you don't want your choices to be embedded into the
+hypertext.</p>
+<p>Note that if you use this style, the unordered list will automatically
+disappear after being clicked, regardless of whether it is marked as
+"<code>transient</code>".</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_9">Headings</h3></div>
+<p>In the default CSS for Undum, the only heading level expected in the
+text is <code>&lt;h1&gt;</code>. You can use other headings, but you'll have to create
+your own CSS styles. One level of heading is almost always enough (if
+not too much) for narrative works.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_10">Types of Link</h2></div>
+<p>Undum captures the links you put into your display content, and uses
+them to control the flow of the game. There are three formats of link
+that Undum understands, plus raw links, which it ignores.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_11">Situation Links</h3></div>
+<p>Situation links are of the form <code>situation-id</code>. They must have no
+additional punctuation. As we'll see below, situation identifiers
+consist of lower case Latin letters, hyphens and the digits 0-9 only.</p>
+<p>Clicking a situation link changes the current situation.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_12">Action Links</h3></div>
+<p>Action links are of the form <code>./action-id</code>. As for situations, action
+identifiers consist of lower case Latin letters, the digits 0-9 and
+hyphens only.</p>
+<p>Clicking an action link carries out the specified action in the
+current situation.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_13">Combined Links</h3></div>
+<p>Combined links are of the form <code>situation-id/action-id</code>. They combine
+both the previous steps: they change to the given situation, and then
+they carry out the given action once there. They are rarely used.</p>
+<p>It is possible to use the combined form to refer to an action in the
+current situation. Undum is smart enough to understand that it doesn't
+need to change situation in that case, so it is entirely equivalent to
+the action link. It is rarely used (because it is so much more
+verbose), but can be useful. For example, we might want a sticky link
+to always take the character into their study and drink a potion,
+having this sticky link point to <code>bedroom/drink-potion</code>, achieves
+this. If they are already in the bedroom, then Undum notices this and
+doesn't try to make them enter it again.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_14">External Links</h3></div>
+<p>As described above, you can add any other links to external content in
+your display content, as long as you mark it with the <code>raw</code> CSS
+class. It is also <em>highly</em> recommended that you mark all such links as
+opening in a new window or tab (add the <code>target="_blank"</code> attribute to
+the <code>&lt;a&gt;</code> tag). If you link the player to another page, and it
+replaces the Undum page, then for most browsers, all progress will be
+lost. Chrome appears to keep the progress, so that if you hit the back
+button you will be where you left off. Other browsers reset the game
+to the last saved location, or back to the beginning if the game
+hasn't been saved.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_15">Link Data</h3></div>
+<p><em>This section describes a feature that is planned, or in development.
+It may not be functional in the current version of the code.</em></p>
+<p>Undum links are allowed to add query data,
+e.g. <code>./action-id?foo=1&amp;bar=2</code>. This extra data is URL-encoded content
+which will be parsed and passed back to your code. For situation links
+the data will be passed into the old situation's <code>exit</code> handler, and
+the new situation's <code>enter</code> handler. For action links, the data will
+be passed into the situation's <code>act</code> handler. For combined links the
+data will be passed into both sets of handlers.</p>
+<p>Raw links, as usual, do not have any processing performed. If they
+contain query data, it will be passed on to their target as it would
+for any link in any HTML document.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h1 id="h_16">File Structure</h1></div>
+<p>An Undum game consists of a single HTML file. This imports the game
+engine and any supporting files. It also provides the structure needed
+for Undum to place content correctly on-screen.</p>
+<p>The Undum engine consists of a single Javascript file, <code>undum.js</code>. In
+order to work, however, it needs supporting files. It requires the
+jQuery library (http://jquery.com) to be already imported, and it
+requires a game definition file to be imported after it.</p>
+<p>The normal pattern of imports in the HTML file is therefore:</p>
+<pre><code>&lt;script type="text/javascript" src="media/js/jquery-1.4.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="media/js/undum.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="media/js/mygame.game.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>By convention, the Javascript files are held in a <code>media/js</code>
+directory, but this is not enforced, you can arrange these files as
+you like, as long as you update the references to match.</p>
+<p>In addition to the Javascript files, Undum expects the HTML file that
+imports it to have a particular structure. Although there is a good
+deal of flexibility, if you need it, you should start with the HTML
+file that is provided.</p>
+<p>Finally, the HTML file will include a CSS file that controls the look
+and feel of the page. There are some elements in the CSS file which
+are used by Undum, and so, as for the HTML page, you should start with
+the CSS files provided.  In most cases you will be able to leave the
+CSS file untouched, or else just tweak colors and image imports to
+match your game's style.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_17">The HTML File</h2></div>
+<p>The sample HTML file provided shows the key points to edit. They are:</p>
+<ul>
+<li>
+<p>The game's title.</p>
+</li>
+<li>
+<p>The top-left panel title and summary (you can leave this as an
+  explanation of Undum, or change it to be more game-specific).</p>
+</li>
+<li>
+<p>The copyright message. Please note that there are two copyright
+  lines, the second one is the acknowledgment that your game is based
+  on Undum. You must leave the second line unchanged, under the terms
+  of use of Undum.</p>
+</li>
+<li>
+<p>The path to your game definition file. By convention, game
+  definition files are named <code>yourgamename.game.js</code>.</p>
+</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_18">The Game Definition File</h2></div>
+<p>The game definition file where you create your game. To define a game
+you must provide the following data:</p>
+<ul>
+<li>
+<p>A unique ID for the game, which is used to make sure saved games
+  don't get confused.</p>
+</li>
+<li>
+<p>A version number that allows you to manage upgrades to your
+  content.</p>
+</li>
+<li>
+<p>All the Situations that make up your game.</p>
+</li>
+<li>
+<p>The identifier of the situation that starts the game.</p>
+</li>
+</ul>
+<p>In addition it is very common to provide the following data:</p>
+<ul>
+<li>
+<p>Descriptions of each quality your game will use, and how that should
+  be displayed to the player.</p>
+</li>
+<li>
+<p>Definitions of what groups of qualities should appear in the
+  character panel and what headings to use to label them.</p>
+</li>
+<li>
+<p>An Initialization function that sets up the game ready for
+  playing. This is where you typically assign any starting qualities
+  to the character, or set their initial character text.</p>
+</li>
+</ul>
+<p>And finally, there are a range of other data you can provide:</p>
+<ul>
+<li>
+<p>Functions to be called whenever any situation is entered, or exited.</p>
+</li>
+<li>
+<p>Functions to be called before or after any action is carried out.</p>
+</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_19">Identifiers</h3></div>
+<p>Identifiers are small snippets of text that allow you to refer to
+something in Undum. There are two types of identifier. The Game
+identifier represents your whole game, and has its own particular
+requirements (described below).</p>
+<p>Lots of other things in Undum have identifiers (Situations, Actions,
+Qualities, Quality Groups), and they all have the same
+requirements. These identifiers must consist of Latin lower-case
+letters (i.e. a-z, no accents), hyphens, and the digits 0-9 only.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_20">Game ID</h3></div>
+<p>The game identifier should be a string that is unlikely to be used in
+other games. You could use a UUID (my preference), or you could use a
+variation on your email <code>mygame-myname@mydomain.com</code>, or a URL you
+control <code>http://mydomain.com/undum-games/mygame</code>. If and when Undum
+games end up being re-distributable (as I hope they will), having a
+universally unique identifier will mean that saved games don't clash.</p>
+<p>As stated previously, the game identifier doesn't have the same
+requirements as any other identifier in Undum, you can use any
+characters to make up your game ID.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_21">Version Number</h3></div>
+<p>The version number is a string of text that indicates what version of
+the content is in the file. There is no set format for this version
+text, so you can use any scheme that suits you. I have used the
+"major.minor" approach.</p>
+<p>Like the Game ID, this value is used to make sure that saved games
+don't clash. If you change you content, then previous saved games may
+not work correctly. By updating the version number, you allow the
+player to be notified of this directly, rather than suffering a
+silent crash. The effect of this is that you don't need to update the
+version number if you make a change to something that doesn't alter
+the structure of the game. If you just change some text, for example,
+or add an extra action that merely outputs a piece of description.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_22">Situation List</h3></div>
+<p>Situations are defined in a Javascript object, placed in the
+<code>undum.game.situations</code> property. Situations in the object use their
+situation identifier as a property name, and a <code>Situation</code> object as
+its value.  For example:</p>
+<pre><code>undum.game.situations = {
+    doorway: new Situation(...),
+    lobby: new SimpleSituation(...),
+    lobby-upstairs-closed: new MyCustomSituation(...),
+    ... etc ...
+};
+</code></pre>
+<p>The situation objects are described more fully below.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_23">Starting Situation</h3></div>
+<p>This is placed in the <code>undum.game.start</code> property. It should consist
+of the situation identifier as a string. It must be given.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_24">Qualities</h3></div>
+<p>Qualities don't have to be displayed to the user. They can just
+function as internal properties for use by your code. Qualities that
+will never be displayed don't need to be declared, you can just set
+them when you need them (we'll look at the API for setting qualities
+below).</p>
+<p>Often you want the quality to be displayed, however, and so you need
+to tell Undum to display the quality, and how it should be
+formatted. The <code>QualityDefinition</code> object does that. Any quality that
+doesn't have a corresponding quality definition will be invisible to
+the player.</p>
+<p>Quality definitions are placed in an object in the
+<code>undum.game.qualities</code> property. Within this object, the property
+names are the quality identifiers, and the values they contain are
+<code>QualityDefinition</code> objects. For example:</p>
+<pre><code>undum.game.qualities = {
+    investigation: new IntegerQuality("Investigation", ...),
+    "found-mr-black": new OnOffQuality("Found Mr. Black", ...),
+    ... etc ...
+};
+</code></pre>
+<p>There are a number of <code>QualityDefinition</code> constructors defined which
+automatically format in common ways, you can also define your own and
+take complete control of the output. We'll return to discussion of the
+API, below.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_25">Quality Groups</h3></div>
+<p>Qualities can be assigned to groups, and displayed under a common
+heading in the character panel. To define groups, place an object in
+the <code>undum.game.qualityGroups</code> property. This object should have
+properties which are the group identifiers, and values that are
+<code>QualityGroup</code> objects.  For example:</p>
+<pre><code>undum.game.qualityGroups = {
+    stats: new QualityGroup(...),
+    clues: new QualityGroup(...),
+    equipment: new QualityGroup(...)
+}
+</code></pre>
+<p>A common source of puzzlement is that you don't use this data
+structure to define which qualities belong in which group. Instead,
+each quality that you want to assign to a group, should be given the
+identifier of the group it belongs to. So your <code>undum.game.qualities</code>
+property will look something like:</p>
+<pre><code>undum.game.qualities = {
+    investigation: new IntegerQuality("Investigation", {group:'stats'}),
+    "found-mr-black": new OnOffQuality("Found Mr. Black", {group:'clues'}),
+    ... etc ...
+};
+</code></pre>
+<p>Again, see the API documentation below for more details about what you
+can pass into these constructors.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_26">Initialization Function</h3></div>
+<p>Your initialization function should be placed in the <code>undum.game.init</code>
+property. Normally its job is to configure the character at the start
+of the game. For example:</p>
+<pre><code>undum.game.init = function(character, system) {
+    character.qualities.investigating = 0;
+    character.qualities.money = 100;
+    ... etc ...
+    system.setCharacterText(...);
+};
+</code></pre>
+<p>Initialization functions can, but normally doesn't, output
+text. Instead the starting situation is tasked with outputting the
+initial content.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_27">Global Event Functions</h3></div>
+<p>Most of the time you want Situations to handle user
+interaction. Occasionally, however, you have to handle something that
+spans situations. It would be inconvenient to duplicate the same code
+in every situation. So Undum provides a set of hooks for you to
+respond globally to user interaction. There are five of these:
+<code>enter</code>, <code>afterEnter</code>, <code>exit</code>, <code>beforeAction</code> and <code>afterAction</code>. You 
+can define functions in your game file using the properties: 
+<code>undum.game.enter</code>, <code>undum.game.afterEnter</code>,
+<code>undum.game.exit</code>, <code>undum.game.beforeAction</code>, and
+<code>undum.game.afterAction</code>.</p>
+<p>The <code>enter</code>, <code>afterEnter</code>, and <code>exit</code> functions look like this:</p>
+<pre><code>undum.game.enter = function(character, system, from, to) {
+    ...
+};
+</code></pre>
+<p>where <code>from</code> and <code>to</code> are the identifiers of the situations being left
+and entered, respectively. And the <code>beforeAction</code> and <code>afterAction</code>
+functions look like this:</p>
+<pre><code>undum.game.beforeAction = function(character, system, situation, action) {
+    ...
+};
+</code></pre>
+<p>where <code>situation</code> is the current situation identifier, and <code>action</code> is
+the identifier of the action being carried out.</p>
+<p>These functions intentionally look like the <code>enter</code>, <code>exit</code> and <code>act</code>
+methods of the <code>Situation</code> object. These are described in more detail
+in the API reference, below.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h1 id="h_28">API Reference</h1></div>
+<p>This section describes the types of object available to your game
+code.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_29"><code>Character</code></h2></div>
+<p>The character is created for you, but is passed into most of the
+functions that you define. It consists of an object with no methods
+and two properties:</p>
+<h4><code>qualities</code></h4>
+<p>The qualities object maps quality identifiers to their current
+value. Your code finds the current value associated with a quality by
+reading from this object, for example:</p>
+<pre><code>var gold = character.qualities.gold;
+</code></pre>
+<p>To set a quality, you have two choices. If you know the quality you
+want to set will not appear in the user interface, then you can set it
+directly:</p>
+<pre><code>character.qualities.gold += 1;
+</code></pre>
+<p>If it does appear on-screen, then this approach will mean that the
+character panel doesn't update, and the screen will be out of sync
+with the actual value. Instead it is better to use the <code>System</code> method
+<code>setQuality</code>, which also updates the UI:</p>
+<pre><code>system.setQuality('gold', character.qualities.gold+1);
+</code></pre>
+<p>It is fine to use <code>setQuality</code> if the quality isn't visible, making
+this the preferred option for all quality modifications.</p>
+<h4><code>sandbox</code></h4>
+<p>Not every bit of data you want to associate with a character fits
+nicely into a quality. The sandbox is a general storage space for any
+further data you want to store in the course of your game, for
+example:</p>
+<pre><code>character.sandbox.roomsSearched.push('bathroom');
+</code></pre>
+<p>Sandbox data is never visible to the user, so you can use any data
+structures you like here, to any depth.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_30"><code>System</code></h2></div>
+<p>The system represents the interface between your code and the
+user-interface.  You don't create your own <code>System</code> object, it is
+passed into your code.</p>
+<h4><code>write(content, elementSelector)</code></h4>
+<p>Writes new content to the main flow of the story. The content you pass
+in must be either valid DOM elements already, or else be a string
+containing text in Display Content format.</p>
+<p>The <code>elementSelector</code> is optional. If you provide it, then the new
+content will be added after the DOM element in the document that
+matches the selector. This allows you to do out-of-order addition of
+content. Simply add a paragraph with an id in your game, then later
+you can give this id as a selector to write, and the new content will
+be inserted immediately following that paragraph, regardless of how
+much extra content has been added since that point. If no selector is
+given then <code>#content</code> is used, i.e. the content is added at the end of
+the document. The <code>writeBefore</code> method inserts content at the start of
+the document, or before a selector.</p>
+<p>The story will scroll to the start of the insertion point. If you do
+not wish to animate this scrolling, but just jump right there, you can
+switch off jQuery's animation system by adding <code>jQuery.fx.off=true</code> to
+your initialization code. This is particularly useful when debugging.</p>
+<h4><code>writeBefore(content, elementSelector)</code></h4>
+<p>Writes content into the story. This method is identical to <code>write</code>,
+above, except that the content is written at the start of the story,
+or if a selector is given, inserted before the matching element. On
+browsers that support it, the story will be scrolled to the insertion
+point.</p>
+<h4><code>doLink(URL)</code></h4>
+<p>Carries out the action associated with the given URL, as if it had
+been the <code>href</code> of a HTML link that the user clicked. This allows you
+to procedurally change situation and carry out actions from your code.</p>
+<h4><code>rnd</code></h4>
+<p>This holds a general purpose random number generator. It is an object
+derived from the <code>Random</code> prototype, so see <code>Random</code> below for details
+on its API.</p>
+<h4><code>time</code></h4>
+<p>This is a numeric value holding the current time, in seconds, since
+the player began playing the game. This value is correctly propagated
+across saves, so it is the only way you should track timing. In
+particular you should never call <code>new Date()</code> and use that value to
+determine the outcome of any event. You can use the current date to
+display the current date, for example, but not to control what actions
+or situations are available. See the section on Loading and Saving for
+more details of why this is important.</p>
+<h4><code>setQuality(qualityId, newValue)</code></h4>
+<p>Sets the character's given quality to the given value. This function
+also updates the character panel, animating the change in value if
+that is necessary. Do not directly set quality values in the
+character, because the user-interface will not detect and reflect
+those changes.</p>
+<h4><code>animateQuality(qualityId, newValue, options)</code></h4>
+<p>Like <code>setQuality</code>, this function changes the current value of the
+given quality. In addition, however, it displays a progress bar that
+shows to the user how the value has changed. The <code>options</code> parameter
+should be an object containing options for how the bar should
+display. The available options are:</p>
+<ul>
+<li>
+<p><code>from</code>: The proportion along the progress bar where the animation
+   starts. Defaults to 0, valid range is 0-1.</p>
+</li>
+<li>
+<p><code>to</code>: The proportion along the progress bar where the animation
+   ends. Defaults to 1, valid range is 0-1.</p>
+</li>
+<li>
+<p><code>showValue</code>: If <code>true</code> (the default) then the new value of the
+   quality is displayed above the progress bar.</p>
+</li>
+<li>
+<p><code>displayValue</code>: If this is given, and <code>showValue</code> is <code>true</code>, then
+   the given value is used above the progress bar. If this isn't
+   given, and <code>showValue</code> is <code>true</code>, then the display value will be
+   calculated from the <code>QualityDefinition</code>, as normal. This option is
+   useful for qualities that don't have a definition, because they
+   don't normally appear in the UI.</p>
+</li>
+<li>
+<p><code>title</code>: The title of the progress bar. If this is not given, then
+   the title of the quality is used. As for <code>displayValue</code> this is
+   primarily used when the progress bar doesn't have a
+   <code>QualityDefinition</code>, and therefore doesn't have a title.</p>
+</li>
+<li>
+<p><code>leftLabel</code>, <code>rightLabel</code>: Underneath the progress bar you can place
+   two labels at the left and right extent of the track. These can
+   help to give scale to the bar. So if the bar signifies going from
+   10.2 to 10.5, you might label the left and right extents with "10"
+   and "11" respectively and have the <code>from</code> and <code>to</code> value be 0.2 and
+   0.5 respectively. If these are not given, then the labels will be
+   omitted.</p>
+</li>
+</ul>
+<h4><code>setCharacterText(content)</code></h4>
+<p>Sets the block of character text that appears in the character
+panel. As for the <code>write</code> method, this text should be either valid DOM
+elements, or a string meeting the Display Content requirements.</p>
+<h4><code>clearLinks(URL)</code></h4>
+<p>Call this function with an Undum link URL (e.g. <code>ballroom</code>, or
+<code>ballroom/open-cabinet</code>). It will remove all occurrences of that link
+from the page. This is equivalent to what happens when you change
+situation, or when you click a link marked with the <code>once</code> CSS
+class. It allows you to control what options are available
+dynamically, from your code.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_31"><code>Random</code></h3></div>
+<p>The <code>Random</code> object provides a set of tools for simple random number
+generation, in a way that is guaranteed to work with the Loading and
+Saving functionality in Undum. An instance of <code>Random</code> is provided in
+the <code>rnd</code> property of the <code>System</code> object, so you will never need to
+create your own. It has the following methods:</p>
+<h4><code>random()</code></h4>
+<p>Generates a random number between 0 and 1, where 0 is inclusive, and 1
+is exclusive. You can use this to check against known probabilities,
+such as:</p>
+<pre><code>if (system.rnd.random() &gt; 0.5) {
+    ...
+}
+</code></pre>
+<p>To check for a 50/50 chance.</p>
+<h4><code>randomInt(min, max)</code></h4>
+<p>Return a random number between the given two values, where both values
+are inclusive. So <code>randomInt(2,3)</code> generates either 2 or 3.</p>
+<h4><code>dice(n, dx, plus)</code></h4>
+<p>Rolls <em>n_ dice with _dx</em> sides and adds <em>plus</em> to the result. This
+allows you to easily get results for rolls from regular RPG-style
+games, such as 3d6+2. The <code>plus</code> parameter may be negative or
+positive.</p>
+<h4><code>aveDice(n, plus)</code></h4>
+<p>Rolls <em>n_ averaging dice, and adds _plus</em> to the result. Averaging dice
+are a special type of d6 with sides marked [2,3,3,4,4,5]. They represent
+the fact that most people are fairly average, and results should not lie
+at the extremes.</p>
+<h4><code>diceString(definition)</code></h4>
+<p>Rolls dice according to the given definition string. The string should
+be of the form xdy+z, where the x component and z component are
+optional. This rolls x dice of with y sides, and adds z to the result,
+the z component can also be negative: xdy-z. The y component can be
+either a number of sides, or can be the special values 'F', for a
+fudge die (with 3 sides, +,0,-), '%' for a 100 sided die, or 'A' for
+an averaging die (with sides 2,3,3,4,4,5).</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_32"><code>Situation</code></h2></div>
+<p>The <code>Situation</code> object is the prototype of all the situations in your
+game. It can be used directly, or through its more common derived
+type, <code>SimpleSituation</code>. The base <code>Situation</code> gives you maximum
+flexibility, but <code>SimpleSituation</code> provides more functionality and can
+produce terser code.</p>
+<h4><code>new Situation(options)</code></h4>
+<p>Creates a new situation. The options array can specify your
+implementation of any or all of the three functions that control the
+behavior of a situation: i.e. <code>enter</code>, <code>act</code>, or <code>exit</code>. This allows
+you to easily create situations that override certain behaviors with
+code such as:</p>
+<pre><code>Situation({
+    enter: function(character, system, from) {
+        ... your implementation ...
+    }
+});
+</code></pre>
+<p>See below for information on <code>enter</code>, <code>exit</code> and <code>act</code>.</p>
+<p>Note that the methods defined in the <code>Situation</code> object are never
+called by your code. They are methods that you implement so that Undum
+can call them to respond to user interaction.</p>
+<h4><code>enter(character, system, from)</code></h4>
+<p>This is called when Undum enters a situation. The <code>character</code> and
+<code>system</code> are instances of <code>Character</code> and <code>System</code> as described
+above. The <code>from</code> parameter is a string containing the situation
+identifier for the situation that we're arriving from.</p>
+<p>This method is the most commonly overridden. It is commonly used to
+describe the current situation (by sending content to
+<code>system.write()</code>) and to update the character (by calling
+<code>system.setQuality()</code> or by changing data in the character's <code>sandbox</code>
+object)..</p>
+<h4><code>exit(character, system, to)</code></h4>
+<p>This method takes the same <code>character</code> and <code>system</code> parameters as
+<code>enter</code>. Its third parameter, <code>to</code>, is a string containing the
+identifier of the situation we're exiting to.</p>
+<h4><code>act(character, system, action)</code></h4>
+<p>This method again takes the same <code>character</code> and <code>system</code> parameters
+as before. Its third parameter is a string containing the action
+identifier corresponding to the link the player clicked. It is common
+to use an <code>if</code> statement or a <code>switch</code> to query this action identifier
+and decide what to do accordingly. For situations in which many
+different actions are possible, consider using the <code>SimpleSituation</code>
+prototype, which provides this switching behavior for you.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_33">SimpleSituation</h3></div>
+<p>This prototype builds on the basic <code>Situation</code>, providing tools to
+make it easy to output content in the <code>enter</code> method, and to switch
+between different functions depending on the action identifier passed
+into the <code>act</code> method. The <code>exit</code> method of <code>SimpleSituation</code> is
+exactly as for the base type <code>Situation</code>.</p>
+<h4><code>new SimpleSituation(content, options)</code></h4>
+<p>Creates a new simple situation that will display the given content
+when its <code>enter</code> method is called. The given options array provides
+further control of the behavior of this type. Valid options are:</p>
+<ul>
+<li>
+<p><code>enter</code>: Providing an enter function in the <code>options</code> parameter
+   allows you to add additional behavior to the enter method. Your
+   custom function will be called <em>in addition to</em> and <em>after</em> the
+   default content is written to the screen. You cannot override
+   <code>SimpleSituation</code>'s <code>enter</code> method by providing this function. To
+   override the method, you would have to create a derived type. If
+   you provide an <code>enter</code> function, it should have the same form as
+   <code>Situation.enter</code>.</p>
+</li>
+<li>
+<p><code>act</code>: Pass in a function to add additional behavior to the act
+   method. As for <code>enter</code>, your method is called <em>in addition to</em> and
+   <em>after</em> the built-in functionality.</p>
+</li>
+<li>
+<p><code>exit</code>: Because <code>SimpleSituation</code> has no default behavior for
+   <code>exit</code>, any function you pass in here will be the only exit
+   behavior for the object you are creating.</p>
+</li>
+<li>
+<p><code>heading</code>: The <code>content</code> that you specify will be written out
+   verbatim.  You can include headings in this content. Often it is
+   more convenient to pass in just the text in the <code>content</code>
+   parameter. In that case you may define this <code>heading</code> parameter to
+   display a heading before the text. Unlike <code>content</code>, this doesn't
+   need to conform to the Display Content requirements.</p>
+</li>
+<li>
+<p><code>actions</code>: This should be an object that maps action identifiers to
+   responses. A response should be either some Display Content to
+   write to the screen, or a function that will process that
+   request. These functions should have the same signature as the
+   <code>Situation.act</code> method. Each function will only be called if the
+   situation receives a call to <code>act</code> with its corresponding
+   identifier. This allows you to simply define functions that only
+   get called when particular actions happen.</p>
+</li>
+</ul>
+<p>An example <code>SimpleSituation</code> definition might be:</p>
+<pre><code>new SimpleSituation(
+    "&lt;p&gt;...content...&lt;/p&gt;",
+    {
+        heading: "Title",
+        actions: {
+            listen: function(character, system, action) {
+                if (character.qualities.hearing &gt; 5) {
+                    system.write("&lt;p&gt;You hear a tinkling inside.&lt;/p&gt;");
+                } else {
+                    system.write("&lt;p&gt;You hear nothing.&lt;/p&gt;");
+                }
+            },
+            search: "&lt;p&gt;You find nothing.&lt;/p&gt;"
+        }
+    }
+);
+</code></pre>
+<p>notice how the <code>listen</code> function is responsible for its own output,
+where the <code>search</code> property is a string in Display Content format,
+ready for output.</p>
+<h4>Functions in <code>SimpleSituation</code></h4>
+<p>Both the <code>content</code> and the <code>heading</code> of a simple situation can be
+provided either as plain text, or as a function. If you provide a
+function, then it will be called with no arguments, and it should
+return a string to use for the output. This enables <code>SimpleSituation</code>
+to be used with other formatting and templating systems.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_34">QualityDefinition</h2></div>
+<p>Quality definitions tell Undum how and where to display a quality in
+the character panel. Each quality definition has one method, <code>format</code>,
+which is responsible for converting a numeric quality value into a
+displayable quantity.</p>
+<p>You define your qualities in your <code>undum.game.qualities</code> property.</p>
+<h4><code>new QualityDefinition(title, options)</code></h4>
+<p>Creates a new <code>QualityDefinition</code>. It is rare to call this constructor
+yourself, most often one of the derived types of <code>QualityDefinition</code>
+are used. They are defined below.</p>
+<p>The <code>title</code> should be a string, and can contain HTML. It is used to
+label the quality in the character panel. It can be any string, it
+doesn't have to be in Display Content format.</p>
+<p>Options are passed in in the <code>options</code> parameter. The following
+options are available.</p>
+<ul>
+<li>
+<p><code>priority</code>: A string used to sort qualities within their
+   groups. When the system displays a list of qualities they will be
+   sorted by this string. If you don't give a priority, then the title
+   will be used, so you'll get alphabetic order. Normally you either
+   don't give a priority, or else use a priority string containing
+   0-padded numbers (e.g. "00001").</p>
+</li>
+<li>
+<p><code>group</code>: The identifier of a group in which to display this
+   parameter. If a group is given, then it must be defined in your
+   <code>undum.game.qualityGroups</code> property.</p>
+</li>
+<li>
+<p><code>extraClasses</code>: These classes will be attached to the <code>&lt;div&gt;</code> tag
+   that surrounds the quality when it is displayed. A common use for
+   this is to add icons representing the quality. In your CSS define a
+   class for each icon, then pass those classes into the appropriate
+   quality definitions.</p>
+</li>
+</ul>
+<h4><code>format(character, value)</code></h4>
+<p>This is called by Undum to get a human readable string representing
+the given quality value for the given character. The method may return
+an empty string if the value has no need to be displayed, or it may
+return <code>null</code> if the quantity itself shouldn't be displayed. The
+difference here is significant. If your <code>QualityDefinition</code> returns
+the empty string, then the quality will appear in the character panel,
+but it will have no value marked. If it returns <code>null</code>, then it will
+be removed from the character panel entirely.</p>
+<p>Most commonly the <code>character</code> parameter is ignored, but in your own
+derived types you can take advantage of being able to access other
+information about the character.</p>
+<p>You may call this function yourself, but there is commonly no need. It
+will be called by Undum any time the corresponding quality needs to be
+displayed.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_35"><code>IntegerQuality</code></h3></div>
+<p>This is a derived type of <code>QualityDefinition</code> that displays the
+quality value by rounding it down to the nearest integer. This is
+ideal for most numeric statistics.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_36"><code>NonZeroIntegerQuality</code></h3></div>
+<p>This is a derived type of <code>IntegerQuality</code> that only displays its
+value when it is non-zero. If it is non-zero then it formats in the
+same way as <code>IntegerQuality</code>. Whereas <code>IntegerQuality</code> whould show
+zero values as '0', this type of quality displays nothing.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_37"><code>NumericQuality</code></h3></div>
+<p>This is a derived type of <code>QualityDefinition</code> that displays the
+quality value directly, as a full floating point value.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_38"><code>WordScaleQuality</code></h3></div>
+<p>Sometimes you want qualities displayed in words rather than
+numbers. This is a derived type of <code>QualityDefinition</code> that allows you
+to define words corresponding to possible quality values.</p>
+<h4><code>new WordScaleQuality(title, words, options)</code></h4>
+<p>The <code>title</code> parameter is exactly as for <code>QualityDefinition</code>.</p>
+<p>The <code>words</code> parameter determines what words will be used. It should be
+an array of strings. By default the first string will be used to
+represent a value of zero (after rounding down), and the second string
+a value of 1, and so on to the end of the array. Values outside the
+array are treated differently depending on the value of <code>useBonuses</code>
+in the <code>options</code> parameter.</p>
+<p>The <code>options</code> parameter supports the same three options as
+<code>QualityDefinition</code>. It also takes the following additional
+parameters:</p>
+<ul>
+<li>
+<p><code>offset</code>: With offset=0 (the default), a quantity value of 0 will
+   map to the first word, and so on. If offset is non-zero then the
+   value given will correspond to the first word in the list. So if
+   offset=4, then the first word in the list will be used for value=4,
+   the second for value=5. You can specify a non-integer offset value,
+   in this case the offset is applied <em>before</em> the value is rounded
+   down.</p>
+</li>
+<li>
+<p><code>useBonuses</code>: If this is true (the default), then values outside the
+   range of words will be constructed from the word and a numeric
+   bonus. So with offset=0 and five words, the last of which is
+   'amazing', a score of six would give 'amazing+1'.  if this is
+   false, then the bonus would be omitted, so anything beyond
+   'amazing' is still 'amazing'.</p>
+</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_39"><code>FudgeAdjectivesQuality</code></h3></div>
+<p>This is a derived type of <code>WordScaleQuality</code> that doesn't require you
+to specify the words you wish to use. It uses the word scale from the
+Fudge RPG: "terrible", "poor", "mediocre", "fair", "good", "great" and
+"superb".</p>
+<h4><code>new FudgeAdjectivesQuality(title, options)</code></h4>
+<p>The parameters <code>title</code> and <code>options</code> are as for the <code>WordScaleQuality</code>
+constructor. The <code>offset</code> option defaults to -3, however (in
+<code>WordScaleQuality</code> it defaults to 0), making "fair" the display value
+for 0.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_40"><code>OnOffQuality</code></h3></div>
+<p>An <code>OnOffQuality</code> returns <code>null</code> from its <code>format</code> method
+(i.e. removes itself from the character panel) when the corresponding
+quality value is zero. Otherwise it returns the empty string (i.e. it
+is shown in the panel, but doesn't have a value label). See
+<code>QualityDisplay.format</code> above for more details on this distinction.</p>
+<h4><code>new OnOffQuality(title, options)</code></h4>
+<p>The constructor for this type is the same as for <code>QualityDefinition</code>
+from which it is derived. It accepts one extra option:</p>
+<ul>
+<li><code>onDisplay</code>: If given, then rather than displaying the empty string,
+   it displays the given string when its corresponding value is
+   non-zero. This can be used to display a check-mark, for example
+   (<code>{onDisplay:"&amp;#10003;"}</code>), or even a HTML <code>img</code> tag.</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h3 id="h_41">YesNoQuality</h3></div>
+<p>A <code>YesNoQuality</code> displays one of two strings depending whether its
+value is zero or not.</p>
+<h4><code>new YesNoQuality(title, options)</code></h4>
+<p>The constructor for this type is the same as for <code>QualityDefinition</code>
+from which it is derived. It accepts two extra options:</p>
+<ul>
+<li><code>yesDisplay</code>, <code>noDisplay</code>: Either or both of these may be given. If
+   they are given, then they should be set to a string, which will be
+   used to indicate non-zero or zero values, respectively. By default
+   "yes" and "no" are used.</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_42"><code>QualityGroup</code></h2></div>
+<p>A quality group defines a set of qualities that should be displayed
+together in the character panel, under an optional subheading. You
+could use quality groups to distinguish between qualities representing
+a character's innate abilities and their equipment, for example.</p>
+<p>You define your quality groups in your <code>undum.game.qualityGroups</code>
+property.</p>
+<h4><code>new QualityGroup(title, options)</code></h4>
+<p>Constructs a new quality group that will have the given <code>title</code> for a
+subheading. The title may be <code>null</code>, indicating that this group does
+not need a heading.</p>
+<p>The <code>options</code> parameter should be an object with the given optional
+parameters:</p>
+<ul>
+<li>
+<p><code>priority</code>: A string used to sort quality groups. When the system
+   displays more than one quality group, they will be sorted by this
+   string. If you don't give a priority, then the title will be used,
+   so you'll get alphabetic order. Normally you either don't give a
+   priority, or else use a priority string containing 0-padded numbers
+   (e.g. "00001").</p>
+</li>
+<li>
+<p><code>extraClasses</code>: These classes will be attached to the <code>&lt;div&gt;</code> tag
+   that surrounds the entire quality group when it is displayed. You
+   can use this in addition to your CSS to radically change the way
+   certain qualities are displayed.</p>
+</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h1 id="h_43">Loading and Saving</h1></div>
+<p>There is no API for you to manually access loading and saving
+functionality. The load and save functions are triggered by the
+buttons on the user interface. But the way loading and saving work
+does have a big impact on the way you write your code.</p>
+<p>Undum makes a big feature of the fact that you can scroll back through
+the story you've helped create. To save your character's progress you
+would have to save not only the current situation and the character's
+qualities, but also all the text that has been generated up to that
+point. This would not be a problem in a downloaded game, because your
+hard-drive is plenty big enough. Unfortunately in a browser game,
+there is a limit on how much data you can store. Worse, this data
+limit is per-domain. So if you hosted 10 Undum games on a server, the
+saved games from all ten would have to fit into the limited
+space. This makes it impractical to save the complete text history.</p>
+<p>Instead Undum saves all the actions you've taken as a player. It
+doesn't save the character's qualities or any other information, just
+the actions. It expects to be able to rebuild the complete text, and
+the complete current state of the character, by playing back these
+actions when the file is loaded. We call this determinism, because the
+current state of the character and the content needs to be determined
+from just the actions they take.</p>
+<p>This means that you must take care to write all your code in a way
+that will generate <em>exactly</em> the same results if the game was played
+again in the same way.</p>
+<p>There are two major limitations to this, firstly it means you can't
+use random events, and secondly you can't use timed events. Both of
+these are such serious limitations that Undum provides ways around
+them.</p>
+<p>Undum provides your code with a random number generator in
+<code>System.rng</code>, which is an object with the prototype <code>Random</code>. This
+random number generator works with the loading and saving code to make
+sure that, when you load a saved game, the exact same random number
+requests will produce the exact same result. This means you get all
+the benefits of randomness (i.e. two separate games may have different
+results for the same action), but we can always replay a game
+exactly. Dealing with random actions is a difficult issue in testing
+any interactive fiction game. This approach solves that problem. You
+should, therefore, <em>never</em> use Javascript's built-in random number
+generate (<code>Math.random</code>), only ever use the one provided by Undum.</p>
+<p>Finally, Undum also provides your code timing information in
+<code>System.time</code>, which is the number of seconds (and fractional seconds)
+elapsed since the player began the game. You can use this timing
+information to implement puzzles in your game (such as asking the
+player to complete a series of tasks in a specified amount of
+time). This timing system coordinates with the loading and saving
+system to make sure that, when you save and load the game, the timing
+picks up where it left off. Feel free to make decisions in your code
+based on the current value of <code>System.time</code>, but never use
+Javascript's <code>Date</code> object.</p>
+<p>If you do not follow these restrictions, then it is likely that saved
+games will not load correctly. A player may save their game at one
+point and find most of their progress wiped out when they load it
+again.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h1 id="h_44">Translation and Internationalization</h1></div>
+<p>Undum provides support for translations and internationalization.
+In particular, if you feel you want to translate Undum, then a lot
+of work has already been done for you. I am very grateful to Oreolek
+for this assistance. He translated the Russian version within days
+of the code being released, and advised on the tools that would
+make translation easier.</p>
+<p>To write a game in another language, you need only to write the game
+content in that language. The identifiers you use in the game (to
+represent situations, actions, qualities and quality groups) must use
+only unaccented lower case latin letters and numbers, but the text you
+generate can contain any content you choose. Including right to left
+content or ideographs.</p>
+<p>Undum itself has a small number of error messages and pieces of text
+that it uses. These include the default names for the
+FudgeAdjectivesQuality values. These strings are all found at the end
+of the <code>undum.js</code> file. They can be overridden. Simply define a new
+language file for your language (e.g. <code>lang/gk.js</code>) and override the
+appropriate strings. In your HTML file, after importing <code>undum.js</code>,
+import you strings file. For example, the end of the Russian
+translation of the tutorial (<code>tutorial.ru.html</code>) has:</p>
+<pre><code>&lt;script type="text/javascript" src="media/js/undum.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="media/js/lang/ru.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>These translation strings are given as an object mapping the string
+name to the translated strings. This object is given as part of the
+<code>undum.translation</code> object, with a property name equal to the language
+name. So, for example, the UK English translation might begin:</p>
+<pre><code>undum.lanuage["en-UK"] = {
+    no_group_definition: "Couldn't find a group definition for {id}.",
+</code></pre>
+<p>Within the translation strings, data to be incorporated later is given
+in curly braces.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_45">Language Codes</h2></div>
+<p>Undum uses a simplified version of the IETF standards for language
+code. For our purposes this consists of three parts, only the first of
+which is required: <code>language-Script-REGION</code> where <code>language</code> is a two
+letter lower-case ISO language code, <code>Script</code> is a four letter
+title-case script identifier, and <code>REGION</code> is a two letter country or
+region code, all capitalized. The script is omitted when it is the
+default script for a language and locale. You would specify a script
+if you were using romaji (Latin letters) to write Japanese, but not if
+you were writing it in Kanji and kana.</p>
+<p>The major virtue of this standard is that it allows fall through when
+a translation is not available. For example a translation into
+Brazillian Portuguese <code>pt-BR</code> might be different to one into Angolan
+Portuguese <code>pt-AO</code>, but there may be some strings they have in
+common. This allows a translator to create a base file for just plain
+Portuguese <code>pt</code>, then each country's dialect can define its own file
+that just overrides a few of the strings.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_46">Filename Conventions</h2></div>
+<p>It is only a convention, but for all files that occur in language
+specific versions, I have used the filename convention of placing the
+language code before the extension, e.g. <code>filename.lang.extension</code>. The
+game file is similar <code>filename.game.lang.js</code>. You are free to use any
+format you choose, of course, but if you want to contribute back to
+the trunk, please follow this convention, to save having to rename
+things and connect up the links later.</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_47">API</h2></div>
+<p>The translation system provides a simple API based on the <code>Globalite</code>
+package of Nicolas Merouze (the implementation is unique to Undum). It
+adds a <code>l()</code> method to the Javascript <code>String</code> prototype. This method
+has the signature <code>l(data)</code>, where data can be any object mapping
+strings to other strings.</p>
+<p>The method attempts to figure out what the current language is by
+looking at the <code>lang</code> attribute of the top level HTML tag (you'll
+notice in the tutorial games this is defined in all cases, you should
+do the same). It then tries to find a matching object containing
+translations in <code>undum.language</code>. If it finds such an object, then it
+looks up the original string in that object to find a translation. It
+then merges any data passed into the <code>l</code> method into the string,
+before returning the result.</p>
+<p>The translation look-up honors the IETF rules for language fallback,
+so (continuing the previous example) if your game file is in Brazilian
+Portuguese <code>pt-BR</code>, and a translation isn't found, then generic
+Portuguese translation <code>pt</code> is also checked. Finally, if no valid
+translation is found, then the default version is used. Since Undum
+was written in English, this default version is the English
+version. This is purely by my convenience, and isn't part of the IETF
+spec!</p>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h1 id="h_48">Changelog</h1></div>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_49">2011-05-27</h2></div>
+<ul>
+<li>
+<p>Added <code>System.writeBefore</code> to do out of order insertion. (credit:
+  ekyrath)</p>
+</li>
+<li>
+<p>Added an optional selector to <code>System.write</code> and
+  <code>System.writeBefore</code> to support out of order insertion. (credit:
+  ekyrath)</p>
+</li>
+<li>
+<p>Removed the use of <code>__defineGetter__</code>, so that the core code now
+  works on IE7 (thanks for the bug report juhana and bloomengine).</p>
+</li>
+</ul>
+<div class="header"><div class="top"><a href="#title" title="Return to top">&#9650;</a></div><h2 id="h_50">2011-08-18</h2></div>
+<ul>
+<li>Added support for functions in the <code>content</code> and <code>header</code> of a
+  <code>SimpleSituation</code> (credit: David Eyk).</li>
+</ul>
+      </div>
+      <div id="legal">
+        <p>
+          Documentation copyright © 2010-2011 IDM. Undum is available
+          <a href="http://github.com/idmillington/undum">here</a>.
+        </p>
+      </div>
+    </div>
+  
+</body></html>

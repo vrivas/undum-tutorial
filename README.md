@@ -1,2 +1,2 @@
 # undum-tutorial
-Breve tutorial y ejemplo de uso de Undum
+Tutorial de uso de Undum para hacer aventuras gráficas

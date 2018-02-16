@@ -2,7 +2,7 @@
 <html lang="es-es"><head>
 
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>Breve Tutorial Undum | Versi�n 2012</title>
+  <title>Breve Tutorial Undum | Versión 2012</title>
 
 
 
@@ -83,26 +83,26 @@ mipre {
 }
   </style>
 
-  <meta content="V�ctor Manuel Rivas Santos" name="author">
+  <meta content="Víctor Manuel Rivas Santos" name="author">
 
 
   <meta content="Tutorial de Undum." name="description">
 
 </head><body>
 <div class="contenido">
-<h1>Breve Tutorial de Undum <sub>| Versi�n 2012</sub></h1>
+<h1>Breve Tutorial de Undum <sub>| Versión 2012</sub></h1>
 <div class="indice">
 <h3>�ndice</h3>
-<a href="#c1">1. �Qu� es Undum?</a><br>
-<a href="#c2">2. �Qu� permite hacer?</a><br>
-<a href="#c3">3. �Cu�les son los conceptos m�s importantes?</a><br>
-<a href="#c4">4. �Qu� informaci�n puedo mostrar?</a><br>
-<a href="#c5">5. �C�mo se define el aspecto visual de la p�gina?</a><br>
+<a href="#c1">1. ¿qué es Undum?</a><br>
+<a href="#c2">2. ¿Qué permite hacer?</a><br>
+<a href="#c3">3. ¿Cuáles son los conceptos más importantes?</a><br>
+<a href="#c4">4. ¿Qué información puedo mostrar?</a><br>
+<a href="#c5">5. ¿Cómo se define el aspecto visual de la página?</a><br>
 <a href="#c6">6. Tipos de enlaces que puedo incluir</a><br>
 <a href="#c7">7. Estructura de ficheros del juego</a><br>
-<a href="#c8">8. El fichero Javascript con la definici�n del juego</a><br>
-<a href="#c9">9. Breve gu�a de referencia</a><br>
-<a href="./idmillington-undum-f02ca7b/games/Roca-Rivasly.html" target="_new">10. Juego de ejemplo: <em>Roca Rivasly</em></a> 
+<a href="#c8">8. El fichero Javascript con la definición del juego</a><br>
+<a href="#c9">9. Breve guía de referencia</a><br>
+<a href="./idmillington-undum-f02ca7b/games/Roca-Rivasly.html" target="_new">10. Juego de ejemplo: <em>Roca Rivasly</em></a>
 
 </div>
 <br>
@@ -112,13 +112,13 @@ mipre {
 ***************************************************************************************************************
 -->
 
-<h2><a name="c1"></a>1. �Qu� es Undum?</h2>
+<h2><a name="c1"></a>1. ¿Qué es Undum?</h2>
 <p>
 Undum es un <ingles>framework</ingles> que se ejecuta en un navegador y permite crear juegos interactivos basados en HTML, CSS y Javascript.
 </p>
 <p>
-Est� disponible en <a href="http://undum.com/" target="_new">http://undum.com/</a>, desde donde se puede <a href="http://github.com/idmillington/undum" target="_new">descargar el c�digo</a> para
-crear nuevos juegos, as� como acceder a <a href="http://undum.com/API.html" target="_new">un manual b�sico de utilizaci�n</a>.
+Está disponible en <a href="http://undum.com/" target="_new">http://undum.com/</a>, desde donde se puede <a href="http://github.com/idmillington/undum" target="_new">descargar el código</a> para
+crear nuevos juegos, así como acceder a <a href="http://undum.com/API.html" target="_new">un manual básico de utilización</a>.
 </p>
 
 
@@ -126,14 +126,14 @@ crear nuevos juegos, as� como acceder a <a href="http://undum.com/API.html" ta
 ***************************************************************************************************************
 -->
 
-<h2><a name="c2"></a>2. �Qu� permite hacer?</h2>
+<h2><a name="c2"></a>2. ¿Qué permite hacer?</h2>
 <p>
-Mejor que explic�rtelo, te dejo enlaces a algunos ejemplos y les echamos un vistazo r�pido:
+Mejor que explicártelo, te dejo enlaces a algunos ejemplos y les echamos un vistazo rápido:
 <ul>
 <li><a href="http://undum.com/games/tutorial.en.html" target="_new">Tutorial de Undum</a> realizado por su autor, I D Millington</li>
 <li>Juego <a href="http://eblong.com/zarf/zweb/matter/" target="_new">The Matter of the Monster</a> de Andrew Plotkin</li>
 <li>Juego <a href="http://diden.net/~maga/undum/idmillington-undum-2cd8eac/games/cavity.en.html" target="_new">Cavity of Time</a> de
-"Ed Packer" (ojo que es para mayores de 18 a�os)</li>
+"Ed Packer" (ojo que es para mayores de 18 años)</li>
 <li>Juego <a href="http://www.jeremiasbabini.com.ar/leaks/en/"  target="_new">Leaks</a> cuyos autores son Jeremias Babini, Eva Bisceglia y Sebastian Garcia
 </li>
 <li>Juego <a href="http://www.deirdrakiai.com/theplay"  target="_new">The Play</a> escrito por Deirdra Kiai</li>
@@ -141,19 +141,19 @@ Mejor que explic�rtelo, te dejo enlaces a algunos ejemplos y les echamos un vi
 </p>
 
 <p>
-Existe una librer�a que permite mejorar las capacidades multimedia de Undum, dicha librer�a es <a href="" target="_new">Vorple</a> y el juego
+Existe una librería que permite mejorar las capacidades multimedia de Undum, dicha librería es <a href="" target="_new">Vorple</a> y el juego
 <a href="http://transcripts.game-testing.org/undum/starborn/" target="_new">Starborn</a> (de Juhana Leinonen) es un ejemplo de lo que se puede hacer con ella.
 </p>
 
 <p>
-Finalmente, si me prometes que seguir�s leyendo este tutorial hasta el final, te dejo el enlace al juego que hemos creado para esta ocasi�n; se llama <a href="./idmillington-undum-f02ca7b/games/Roca-Rivasly.html" target="_new">Roca Rivasly</a> y te puede servir de base para hacer tus propios juegos.
+Finalmente, si me prometes que seguirás leyendo este tutorial hasta el final, te dejo el enlace al juego que hemos creado para esta ocasión; se llama <a href="./idmillington-undum-f02ca7b/games/Roca-Rivasly.html" target="_new">Roca Rivasly</a> y te puede servir de base para hacer tus propios juegos.
 </p>
 <!--
 ***************************************************************************************************************
 -->
-<h2><a name="c3"></a>3. �Cu�les son los conceptos m�s importantes?</h2>
+<h2><a name="c3"></a>3. ¿Cuáles son los conceptos más importantes?</h2>
 <p>
-Las historias creadas con Undum est�n pensadas para que haya un personaje (t�) que va interactuando con la pantalla, pasando de unas escenas a otras, recogiendo objetos y modificando con ello su status en el juego.
+Las historias creadas con Undum están pensadas para que haya un personaje (tú) que va interactuando con la pantalla, pasando de unas escenas a otras, recogiendo objetos y modificando con ello su status en el juego.
 </p>
 <p>
 Los tres conceptos que sirven manejarse en Undum son:
@@ -167,15 +167,15 @@ Los tres conceptos que sirven manejarse en Undum son:
 
 <h3>Situaciones</h3>
 <p>
-Cada situaci�n es algo as� como una escena, y consta de un contenido que describe d�nde est�s, qu� ves y qu� puedes hacer. La situaci�n permite por tanto interactuar con el usuario. En todo momento hay una <strong>situaci�n activa</strong>.
+Cada situación es algo así como una escena, y consta de un contenido que describe dónde estás, qué ves y qué puedes hacer. La situación permite por tanto interactuar con el usuario. En todo momento hay una <strong>situación activa</strong>.
 </p>
 <p>
-El contenido de una situaci�n incluye enlaces a otras situaciones y enlaces a acciones. Los primeros cambian la situaci�n actual por otra; los segundos permiten realizar acciones por parte del personaje.
+El contenido de una situación incluye enlaces a otras situaciones y enlaces a acciones. Los primeros cambian la situación actual por otra; los segundos permiten realizar acciones por parte del personaje.
 </p>
 
 <h3>Acciones</h3>
 <p>
-En cada situaci�n podemos ofrecer, si lo vemos oportuno, acciones que el usuario puede realizar. Una acci�n no tiene por qu� provocar un cambio de situaci�n, aunque puede hacerlo. La elecci�n de una acci�n por parte del usuario puede generar nuevo contenido en la situaci�n as� como aportar nuevas acciones.
+En cada situación podemos ofrecer, si lo vemos oportuno, acciones que el usuario puede realizar. Una acción no tiene por qué provocar un cambio de situación, aunque puede hacerlo. La elección de una acción por parte del usuario puede generar nuevo contenido en la situación así como aportar nuevas acciones.
 </p>
 <h3>Propiedades (<ingles>qualities</ingles>)</h3>
 
@@ -185,11 +185,11 @@ En cada situaci�n podemos ofrecer, si lo vemos oportuno, acciones que el usuar
 ***************************************************************************************************************
 -->
 
-<h2><a name="c4"></a>4. �Qu� informaci�n puedo mostrar?</h2>
+<h2><a name="c4"></a>4. ¿Qué información puedo mostrar?</h2>
 <p>
-Toda la informaci�n que se proporciona al usuario est� en HTML, aunque tenemos que construirlo correctamente formando lo que denominaremos un <strong>contenido a mostrar</strong> (<ingles>display content</ingles>). B�sicamente eso significa que:
+Toda la información que se proporciona al usuario está en HTML, aunque tenemos que construirlo correctamente formando lo que denominaremos un <strong>contenido a mostrar</strong> (<ingles>display content</ingles>). Básicamente eso significa que:
 <ul>
-<li>El visor siempre debe comenzar y acabar con una etiqueta v�lida HTML.</li>
+<li>El visor siempre debe comenzar y acabar con una etiqueta válida HTML.</li>
 <li>Las etiquetas deben estar correctamente anidadas y cerradas.</li>
 </ul>
 </p>
@@ -197,19 +197,19 @@ Toda la informaci�n que se proporciona al usuario est� en HTML, aunque tenem
 ***************************************************************************************************************
 -->
 
-<h2><a name="c5"></a>5. �C�mo se define el aspecto visual de la p�gina?</h2>
+<h2><a name="c5"></a>5. ¿Cómo se define el aspecto visual de la página?</h2>
 <p>
-Al ser una p�gina web, el aspecto visual lo definiremos con CSS, aunque hay que saber que hay una serie de clases predefinidas que no debemos modificar:
+Al ser una página web, el aspecto visual lo definiremos con CSS, aunque hay que saber que hay una serie de clases predefinidas que no debemos modificar:
 <ul>
-<li><strong>class="transient"</strong> : Contenido que debe desaparecer al cambiar de situaci�n. Bueno para los p�rrafos que muestran opciones al usuario, porque desaparecer�n al marcar una de ellas.</li>
-<li><strong>class="sticky"</strong>: (v�lido s�lo para acciones) la acci�n sigue activa al cambiar de situaci�n.</li>
-<li><strong>class="raw"</strong>>: (s�lo para enlaces) representa un enlace a una p�gina externa. Podemos combinarlo con <code>sticky</code> si nos hace falta y es conveniente a�adir <code>target="_new"</code>.</li>
-<li><strong>class="once"</strong>: (s�lo para acciones) desactiva la acci�n (tantas veces como est� en la situaci�n) una vez ha sido pulsada; nos asegura que s�lo podremos pulsarla una vez.</li>
-<li><strong>class="options"</strong>: (s�lo para listas ul) muestra una tabla de opciones y desaparece al pinchar en una de ellas.
+<li><strong>class="transient"</strong> : Contenido que debe desaparecer al cambiar de situación. Bueno para los párrafos que muestran opciones al usuario, porque desaparecerán al marcar una de ellas.</li>
+<li><strong>class="sticky"</strong>: (válido solo para acciones) la acción sigue activa al cambiar de situación.</li>
+<li><strong>class="raw"</strong>>: (solo para enlaces) representa un enlace a una página externa. Podemos combinarlo con <code>sticky</code> si nos hace falta y es conveniente a�adir <code>target="_new"</code>.</li>
+<li><strong>class="once"</strong>: (solo para acciones) desactiva la acción (tantas veces como está en la situación) una vez ha sido pulsada; nos asegura que solo podremos pulsarla una vez.</li>
+<li><strong>class="options"</strong>: (solo para listas ul) muestra una tabla de opciones y desaparece al pinchar en una de ellas.
 </ul>
 </p>
 <p>
-El creador de Undum opina que s�lo se debe usar un encabezado a lo largo del juego, por lo que s�lo ha predefinido el estilo de H1. No obstante, podemos redefinir nuestros estilos si lo vemos conveniente a�adiendo nuestros propios ficheros CSS.
+El creador de Undum opina que solo se debe usar un encabezado a lo largo del juego, por lo que solo ha predefinido el estilo de H1. No obstante, podemos redefinir nuestros estilos si lo vemos conveniente a�adiendo nuestros propios ficheros CSS.
 </p>
 
 
@@ -218,11 +218,11 @@ El creador de Undum opina que s�lo se debe usar un encabezado a lo largo del j
 -->
 <h2><a name="c6"></a>6. Tipos de enlaces que puedo incluir</h2>
 <p>
-Las situaciones y acciones se incorporan al texto como enlaces, es decir: &lt;a>. Son las m�s frecuentes aunque el conjunto total de enlaces son:
+Las situaciones y acciones se incorporan al texto como enlaces, es decir: &lt;a>. Son las más frecuentes aunque el conjunto total de enlaces son:
 <ul>
-	<li>Enlaces a situaciones: <code>situation-id</code>. Cambia la situaci�n activa</li>
-	<li>Enlaces a acciones: <code>./action-id</code>. Lleva a cabo la acci�n indicada</li>
-	<li>Enlaces combinados: <code>situation-id/action-</code>. Cambian la situaci�n y realizan la acci�n. Rara vez se usan.</li>
+	<li>Enlaces a situaciones: <code>situation-id</code>. Cambia la situación activa</li>
+	<li>Enlaces a acciones: <code>./action-id</code>. Lleva a cabo la acción indicada</li>
+	<li>Enlaces combinados: <code>situation-id/action-</code>. Cambian la situación y realizan la acción. Rara vez se usan.</li>
 	<li>Enlaces externos: con <code>class="raw"</code>; Conveniente poner el target apuntando a otra ventana/pesta�a</li>
 </ul>
 </p>
@@ -233,11 +233,11 @@ Las situaciones y acciones se incorporan al texto como enlaces, es decir: &lt;a>
 -->
 <h2><a name="c7"></a>7. Estructura de ficheros del juego</h2>
 <p>
-Aunque podemos utilizar la estructura que queramos, que para eso es una p�gina web, el autor nos sugiere la siguiente:
+Aunque podemos utilizar la estructura que queramos, que para eso es una página web, el autor nos sugiere la siguiente:
 <ul>
-	<li>Cada juego se compone de UN s�lo fichero HTML, que a su vez debe incrustar:
+	<li>Cada juego se compone de UN solo fichero HTML, que a su vez debe incrustar:
 		<ul>
-		<li>La librer�a jQuery: <code>media/js/jquery-1.4.2.min.js</code></li>
+		<li>La librería jQuery: <code>media/js/jquery-1.4.2.min.js</code></li>
 		<li>El framework Undum: <code>media/js/undum.js</code></li>
 		<li>El fichero Javascript propio del juego: <code>media/js/mijuego.game.js</code></li>
 		<li>Archivo (o archivos) CSS: <code>media/css/undum.css</code></li>
@@ -251,7 +251,7 @@ Aunque podemos utilizar la estructura que queramos, que para eso es una p�gina
 <p>
 El fichero HTML incluye:
 <ul>
-<li>El t�tulo del juego</li>
+<li>El título del juego</li>
 <li>El panel izquierdo superior con el titulo y el resumen</li>
 <li>El mensaje de copyright. Debemos dejar el relativo a Undum</li>
 <li>La ruta relativa al fichero donde se define el juego (normalmente: <code>media/js/mijuego.games.js</code>)</li>
@@ -261,29 +261,29 @@ El fichero HTML incluye:
 <!--
 ***************************************************************************************************************
 -->
-<h2><a name="c8"></a>8. El fichero Javascript con la definici�n del juego</h2>
+<h2><a name="c8"></a>8. El fichero Javascript con la definición del juego</h2>
 <p>
 Como hemos indicado, se suele ubicar en <code>media/js</code> y llamarse algo como <code>nombredeljuego.games.js</code>.
 Este fichero debe proporcionar:
 <ul>
-	<li>Un identificador �nico (para los datos guardados)</li>
-	<li>Versi�n dle juego</li>
-	<li>Descripci�n de todas las situaciones, con sus acciones asociadas</li>
-	<li>La situaci�n de inicio del juego: undum.game.start = situation-id</li>
-	<li>Funciones a las que se llamar�n cada vez que se entre o salga de una situaci�n</li>
-	<li>Funciones a las que se llamar�n antes o despu�s de llevar a cabo una acci�n</li>
+	<li>Un identificador único (para los datos guardados)</li>
+	<li>Versión dle juego</li>
+	<li>Descripción de todas las situaciones, con sus acciones asociadas</li>
+	<li>La situación de inicio del juego: undum.game.start = situation-id</li>
+	<li>Funciones a las que se llamarán cada vez que se entre o salga de una situación</li>
+	<li>Funciones a las que se llamarán antes o después de llevar a cabo una acción</li>
 </ul>
 </p>
 <p>
-Por supuesto, tambi�n debe incorporar todas las propiedades (<ingles>qualities</ingles>):
+Por supuesto, también debe incorporar todas las propiedades (<ingles>qualities</ingles>):
 <ul>
-<li>Descripciones de cada una de las propiedades del personaje y de c�mo se mostrar�n</li>
-<li>Definiciones de grupos de propiedades, cu�les deben aparecer en el panel y qu� cabeceras deben llevar</li>
-<li>Una funci�n para inicializar las propiedades.</li>
+<li>Descripciones de cada una de las propiedades del personaje y de cómo se mostrarán</li>
+<li>Definiciones de grupos de propiedades, cuáles deben aparecer en el panel y qué cabeceras deben llevar</li>
+<li>Una función para inicializar las propiedades.</li>
 </ul>
 
 <h3>
-Ejemplos de c�digo:
+Ejemplos de código:
 </h3>
 <pre class="codigo">
 // LISTA DE SITUACIONES
@@ -323,7 +323,7 @@ undum.game.init = function(character, system) {
 
 
 <h3>
-Ejemplos de c�digo de nuestro juego:
+Ejemplos de código de nuestro juego:
 </h3>
 <pre class="codigo">
 
@@ -339,15 +339,15 @@ start: new undum.SimpleSituation(
   }
 ),
 santoysenia: new undum.SimpleSituation (
-  "&lt;p>El castillo est� cerrado a cal y canto... \
+  "&lt;p>El castillo está cerrado a cal y canto... \
   aunque te piden el santo y se�a:&lt;/p>\
   &lt;p class='dialogo'>- �Cu�nto son 3+4?&lt;/p>\
   &lt;p>Ante tama�a afrenta tu respuesta podr�a ser  \
   &lt;a href='incorrecta01'>que no te has traido la calculadora&lt;/a>,
-  y tambi�n que 3+4 &lt;a href='patiodearmas'>suman 7&lt;/a> \
+  y también que 3+4 &lt;a href='patiodearmas'>suman 7&lt;/a> \
   (a juzgar por los 4 dedos levantados de tu mano derecha y\
    los 3 de la izquierda), aunque tampoco estar�a mal confesar que \
-  &lt;a href='incorrecta02'>aquel d�a no fuiste a la escuela&lt;/a> pues te
+  &lt;a href='incorrecta02'>aquel día no fuiste a la escuela&lt;/a> pues te
   quedaste cuidando a tu lobo huargo.&lt;/p>"
     ),
 // ...
@@ -371,11 +371,11 @@ undum.game.qualities = {
 };
 
 
-// INicializaci�n
+// INicialización
 undum.game.init = function(character, system) {
   system.setQuality( "antorcha" , false )
   system.setQuality( "llave" , false )
-  system.setCharacterText("&lt;p>�Comienzas tu fascinante aventura!&lt;/p>");
+  system.setCharacterText("&lt;p>¡Comienzas tu fascinante aventura!&lt;/p>");
 };
 </pre>
 
@@ -383,19 +383,19 @@ undum.game.init = function(character, system) {
 <!--
 ***************************************************************************************************************
 -->
-<h2><a name="c9"></a>9. Breve gu�a de referencia</h2>
+<h2><a name="c9"></a>9. Breve guía de referencia</h2>
 
 <p>
-Relatamos algunas de las carcter�sticas de los elementos de Undum:
+Relatamos algunas de las características de los elementos de Undum:
 <ul>
 <li>character: el personaje; hay que crearlo. Contiene <ingles><code>character.qualities</code></ingles>:
 <mipre>
 
 		* character.qualities.edad; // Acceso
 
-		* character.qualities.edad++; // Modificaci�n si no se muestra en el estado
+		* character.qualities.edad++; // Modificación si no se muestra en el estado
 
-		* <strong>system</strong>.setQuality('gold', character.qualities.gold+1); // Modificaci�n si se muestara
+		* <strong>system</strong>.setQuality('gold', character.qualities.gold+1); // Modificación si se muestara
 
 		* // sandbox: permite guardar cualquier estructura que deseemos, aunque no se muestra al usuario.
 		  character.sandbox.elementos.push( 'pelota' )
@@ -403,22 +403,22 @@ Relatamos algunas de las carcter�sticas de los elementos de Undum:
 </mipre>
 </li>
 
-<li>system: representa la interfaz entre el c�digo y el usuario.
+<li>system: representa la interfaz entre el código y el usuario.
 Contiene:
 <mipre>
 
 		* write(content, [elementSelector])	: escribe nuevo contenido en el flujo de la historia.
 
-		- El contenido debe ser DOM v�lido, o una cadena de contenido v�lido para el contenido a mostrar.
-		- Si proporcionamos elementSelector, se insertar� detr�s de dicho elemento; si no, detr�s de #content
+		- El contenido debe ser DOM válido, o una cadena de contenido válido para el contenido a mostrar.
+		- Si proporcionamos elementSelector, se insertará detrás de dicho elemento; si no, detrás de #content
 		  (aunque usando writeBefore) se inserta antes.
-		- Una vez insertado se ir� a ese punto, para seguir con la historia
+		- Una vez insertado se irá a ese punto, para seguir con la historia
       (conveniente establecer jQuery.fx.off=true cuando estemos depurando)
 
 
-		* doLink(URL): sirve para cambiar de situaci�n o realizar una acci�n desde el c�digo.
+		* doLink(URL): sirve para cambiar de situación o realizar una acción desde el código.
 
-		* rnd: objeto para genear de n�meros aleatorios.
+		* rnd: objeto para genear de números aleatorios.
 			Incluye:
 				- random() // [0,1)
 				- randomInt(min, max) // [min, max]
@@ -430,9 +430,9 @@ Contiene:
 
 		* setQuality ( qualityId, new Value )
 
-		* setCharacterText(content): Texto que aparecer� en el panel del personaje; debe ser tipo DOM o contenido a mostrar
+		* setCharacterText(content): Texto que aparecerá en el panel del personaje; debe ser tipo DOM o contenido a mostrar
 
-		* clearLinks(URL): Elimina todos los enlaces que haya en la situaci�n
+		* clearLinks(URL): Elimina todos los enlaces que haya en la situación
 
 </mipre>
 </li>
@@ -440,8 +440,8 @@ Contiene:
 Contiene:
 <mipre>
 
-		* new Situation(options): options permite incluir la definici�n de funciones para enter, act, or exit,
-		  aunque se pueden especificar despu�s:
+		* new Situation(options): options permite incluir la definición de funciones para enter, act, or exit,
+		  aunque se pueden especificar después:
 
 			- enter(character, system, from)
 			- exit(character, system, to)
@@ -453,16 +453,16 @@ En cualquier caso, es mucho mejor usar SimpleSituation, sobre todo cuando hay va
 
 <mipre>
 
-	* SimpleSituation: m�s f�cil la salida en pantalla del enter, as� como la toma de decisiones en al act; igual para el exit.
+	* SimpleSituation: más fácil la salida en pantalla del enter, así como la toma de decisiones en al act; igual para el exit.
 
 	* new SimpleSituation(content, options)
 		En options pondremos:
-		- heading: Un cabecera que se pondr� "tal cual" (verbatim) en la situaci�n.
-		- enter: funci�n a ejecutar tras llamar al enter por defecto, se hace adem�s lo que aqu� indiquemos.
-		- act: funci�n con el comportamiento adicional al m�todo por defecto act.
-		- exit: como no hay opci�n por defecto para exit en Situation, esto ser� lo �nico que se haga si se define.
+		- heading: Un cabecera que se pondrá "tal cual" (verbatim) en la situación.
+		- enter: función a ejecutar tras llamar al enter por defecto, se hace además lo que aqué indiquemos.
+		- act: función con el comportamiento adicional al m�todo por defecto act.
+		- exit: como no hay opción por defecto para exit en Situation, esto ser� lo �nico que se haga si se define.
 		- actions: Objeto que mapea los identificadores de acciones a las respuestas.
-		  La respuesta puede ser un contenido a mostrar para escribir en pantalla, o una funci�n que procesar� la petici�n.
+		  La respuesta puede ser un contenido a mostrar para escribir en pantalla, o una función que procesar� la petición.
 
 </mipre>
 <pre class="codigo">
@@ -487,7 +487,7 @@ new SimpleSituation(
 </li>
 
 <li>
-Definici�n de propiedades: undum.game.qualities
+Definición de propiedades: undum.game.qualities
 <mipre>
 
 		* QualityDefinition(title, options): no suele usarse, sino sus derivadas.
@@ -498,19 +498,19 @@ Definici�n de propiedades: undum.game.qualities
 			           extraClasses ()Se a�aden al "class" de la propiedad cuando se muestra, por ejemplo para iconos)
 
 
-		* IntegerQuality: Muestra la cualidad como el entero m�s cercano.
+		* IntegerQuality: Muestra la cualidad como el entero más cercano.
 
-		* NonZeroIntegerQuality: Como la anterior, pero s�lo se muestra cuando es distinto de cero.
+		* NonZeroIntegerQuality: Como la anterior, pero solo se muestra cuando es distinto de cero.
 
-		* NumericQuality: Muestra el valor como un n�mero real
+		* NumericQuality: Muestra el valor como un número real
 
 		* WordScaleQuality(title, words, options):
 
 			- words: vector de cadenas
-			- options: contiene priority, group y extraClasses, y adem�s:
-				- offset: para poder utilizar n�meros negativos en el acceso
-				- useBonuses: por defecto es true indicando que si usamos un �ndice mayor que el n�mero de palabras,
-				  se a�adir�n valos num�ricos (fuerte+1, fuerte+2, etc.)
+			- options: contiene priority, group y extraClasses, y además:
+				- offset: para poder utilizar números negativos en el acceso
+				- useBonuses: por defecto es true indicando que si usamos un �ndice mayor que el número de palabras,
+				  se a�adirán valos num�ricos (fuerte+1, fuerte+2, etc.)
 
 		* FudgeAdjectivesQuality: tiene definidas directamente las palabras "terrible", "poor",
 		                          "mediocre", "fair", "good", "great" y "superb".
@@ -528,15 +528,15 @@ Definici�n de propiedades: undum.game.qualities
 <mipre>
 
     - priority: Una cadena indicando el orden en que se visualizar� entre todos los grupos.
-		          Se ordenan alfab�ticamente, por lo que es normal indicar algo como: "00001", "00002", etc.
+		          Se ordenan alfabéticamente, por lo que es normal indicar algo como: "00001", "00002", etc.
 
-    - extraClasses: Clases adicionales que se a�adir�n  al div que incluye al grupo.
+    - extraClasses: Clases adicionales que se a�adirán  al div que incluye al grupo.
 
 </mipre>
 </li>
 
 <li>Guardar y cargar:	No guarda los datos sino las acciones, por eso es importante usar sus generadores aleatorios</li>
-<li>Internacionalizaci�n:	Sobreescribir las que hay en undum.js metiendo unfichero en lang/es.js y carg�ndolo despu�s de undum.js</li>
+<li>Internacionalización:	Sobreescribir las que hay en undum.js metiendo unfichero en lang/es.js y carg�ndolo después de undum.js</li>
 
 </ul>
 
@@ -545,7 +545,7 @@ Definici�n de propiedades: undum.game.qualities
 </p>
 
 <hr>
-(C) V�ctor Manuel Rivas Santos<br>
+(C) Víctor Manuel Rivas Santos<br>
 http://vrivas.es - vrivas@vrivas.es
 </div>
 

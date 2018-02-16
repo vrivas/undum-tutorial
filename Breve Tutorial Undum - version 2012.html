@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="es-es"><head>
 
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
   <title>Breve Tutorial Undum | Versión 2012</title>
 
 
@@ -92,8 +92,8 @@ mipre {
 <div class="contenido">
 <h1>Breve Tutorial de Undum <sub>| Versión 2012</sub></h1>
 <div class="indice">
-<h3>�ndice</h3>
-<a href="#c1">1. ¿qué es Undum?</a><br>
+<h3>Índice</h3>
+<a href="#c1">1. ¿Qué es Undum?</a><br>
 <a href="#c2">2. ¿Qué permite hacer?</a><br>
 <a href="#c3">3. ¿Cuáles son los conceptos más importantes?</a><br>
 <a href="#c4">4. ¿Qué información puedo mostrar?</a><br>
@@ -203,13 +203,13 @@ Al ser una página web, el aspecto visual lo definiremos con CSS, aunque hay que
 <ul>
 <li><strong>class="transient"</strong> : Contenido que debe desaparecer al cambiar de situación. Bueno para los párrafos que muestran opciones al usuario, porque desaparecerán al marcar una de ellas.</li>
 <li><strong>class="sticky"</strong>: (válido solo para acciones) la acción sigue activa al cambiar de situación.</li>
-<li><strong>class="raw"</strong>>: (solo para enlaces) representa un enlace a una página externa. Podemos combinarlo con <code>sticky</code> si nos hace falta y es conveniente a�adir <code>target="_new"</code>.</li>
+<li><strong>class="raw"</strong>: (solo para enlaces) representa un enlace a una página externa. Podemos combinarlo con <code>sticky</code> si nos hace falta y es conveniente añadir <code>target="_new"</code>.</li>
 <li><strong>class="once"</strong>: (solo para acciones) desactiva la acción (tantas veces como está en la situación) una vez ha sido pulsada; nos asegura que solo podremos pulsarla una vez.</li>
 <li><strong>class="options"</strong>: (solo para listas ul) muestra una tabla de opciones y desaparece al pinchar en una de ellas.
 </ul>
 </p>
 <p>
-El creador de Undum opina que solo se debe usar un encabezado a lo largo del juego, por lo que solo ha predefinido el estilo de H1. No obstante, podemos redefinir nuestros estilos si lo vemos conveniente a�adiendo nuestros propios ficheros CSS.
+El creador de Undum opina que solo se debe usar un encabezado a lo largo del juego, por lo que solo ha predefinido el estilo de H1. No obstante, podemos redefinir nuestros estilos si lo vemos conveniente añadiendo nuestros propios ficheros CSS.
 </p>
 
 
@@ -223,7 +223,7 @@ Las situaciones y acciones se incorporan al texto como enlaces, es decir: &lt;a>
 	<li>Enlaces a situaciones: <code>situation-id</code>. Cambia la situación activa</li>
 	<li>Enlaces a acciones: <code>./action-id</code>. Lleva a cabo la acción indicada</li>
 	<li>Enlaces combinados: <code>situation-id/action-</code>. Cambian la situación y realizan la acción. Rara vez se usan.</li>
-	<li>Enlaces externos: con <code>class="raw"</code>; Conveniente poner el target apuntando a otra ventana/pesta�a</li>
+	<li>Enlaces externos: con <code>class="raw"</code>; Conveniente poner el target apuntando a otra ventana/pestaña</li>
 </ul>
 </p>
 
@@ -340,13 +340,13 @@ start: new undum.SimpleSituation(
 ),
 santoysenia: new undum.SimpleSituation (
   "&lt;p>El castillo está cerrado a cal y canto... \
-  aunque te piden el santo y se�a:&lt;/p>\
-  &lt;p class='dialogo'>- �Cu�nto son 3+4?&lt;/p>\
-  &lt;p>Ante tama�a afrenta tu respuesta podr�a ser  \
+  aunque te piden el santo y seña:&lt;/p>\
+  &lt;p class='dialogo'>- ¿Cuánto son 3+4?&lt;/p>\
+  &lt;p>Ante tamaña afrenta tu respuesta podría ser  \
   &lt;a href='incorrecta01'>que no te has traido la calculadora&lt;/a>,
   y también que 3+4 &lt;a href='patiodearmas'>suman 7&lt;/a> \
   (a juzgar por los 4 dedos levantados de tu mano derecha y\
-   los 3 de la izquierda), aunque tampoco estar�a mal confesar que \
+   los 3 de la izquierda), aunque tampoco estaría mal confesar que \
   &lt;a href='incorrecta02'>aquel día no fuiste a la escuela&lt;/a> pues te
   quedaste cuidando a tu lobo huargo.&lt;/p>"
     ),
@@ -422,7 +422,7 @@ Contiene:
 			Incluye:
 				- random() // [0,1)
 				- randomInt(min, max) // [min, max]
-				- dice(n, dx, plus) // n dados, dx caras, a�adiendo plus
+				- dice(n, dx, plus) // n dados, dx caras, añadiendo plus
 				- aveDice(n, plus)
 				- diceString(definition)
 
@@ -459,10 +459,10 @@ En cualquier caso, es mucho mejor usar SimpleSituation, sobre todo cuando hay va
 		En options pondremos:
 		- heading: Un cabecera que se pondrá "tal cual" (verbatim) en la situación.
 		- enter: función a ejecutar tras llamar al enter por defecto, se hace además lo que aqué indiquemos.
-		- act: función con el comportamiento adicional al m�todo por defecto act.
-		- exit: como no hay opción por defecto para exit en Situation, esto ser� lo �nico que se haga si se define.
+		- act: función con el comportamiento adicional al método por defecto act.
+		- exit: como no hay opción por defecto para exit en Situation, esto será lo único que se haga si se define.
 		- actions: Objeto que mapea los identificadores de acciones a las respuestas.
-		  La respuesta puede ser un contenido a mostrar para escribir en pantalla, o una función que procesar� la petición.
+		  La respuesta puede ser un contenido a mostrar para escribir en pantalla, o una función que procesará la petición.
 
 </mipre>
 <pre class="codigo">
@@ -495,7 +495,7 @@ Definición de propiedades: undum.game.qualities
 			- title: cadena
 			- options: priority (para ordenarlas en el grupo: "00001" ),
 			           group (grupo previamente definido al que pertenece),
-			           extraClasses ()Se a�aden al "class" de la propiedad cuando se muestra, por ejemplo para iconos)
+			           extraClasses ()Se añaden al "class" de la propiedad cuando se muestra, por ejemplo para iconos)
 
 
 		* IntegerQuality: Muestra la cualidad como el entero más cercano.
@@ -510,33 +510,33 @@ Definición de propiedades: undum.game.qualities
 			- options: contiene priority, group y extraClasses, y además:
 				- offset: para poder utilizar números negativos en el acceso
 				- useBonuses: por defecto es true indicando que si usamos un �ndice mayor que el número de palabras,
-				  se a�adirán valos num�ricos (fuerte+1, fuerte+2, etc.)
+				  se a�adirán valos numéricos (fuerte+1, fuerte+2, etc.)
 
 		* FudgeAdjectivesQuality: tiene definidas directamente las palabras "terrible", "poor",
 		                          "mediocre", "fair", "good", "great" y "superb".
 
 		* OnOffQuality(title, options)
 
-			- onDisplay: permite a�adir una marca (como el tic de validado) cuando se muestra la propiedad y
+			- onDisplay: permite añadir una marca (como el tic de validado) cuando se muestra la propiedad y
 			             tiene el valor on.
 
 		* YesNoQuality(title, options)
 	 		- yesDisplay, noDisplay: INdican el valor que se debe mostrar para "yes" y/o para "no".
 
 </li>
-<li>QualityGroup(title, options). Donde options contendr�:
+<li>QualityGroup(title, options). Donde options contendrá:
 <mipre>
 
-    - priority: Una cadena indicando el orden en que se visualizar� entre todos los grupos.
+    - priority: Una cadena indicando el orden en que se visualizará entre todos los grupos.
 		          Se ordenan alfabéticamente, por lo que es normal indicar algo como: "00001", "00002", etc.
 
-    - extraClasses: Clases adicionales que se a�adirán  al div que incluye al grupo.
+    - extraClasses: Clases adicionales que se añadirán  al div que incluye al grupo.
 
 </mipre>
 </li>
 
 <li>Guardar y cargar:	No guarda los datos sino las acciones, por eso es importante usar sus generadores aleatorios</li>
-<li>Internacionalización:	Sobreescribir las que hay en undum.js metiendo unfichero en lang/es.js y carg�ndolo después de undum.js</li>
+<li>Internacionalización:	Sobreescribir las que hay en undum.js metiendo unfichero en lang/es.js y cargándolo después de undum.js</li>
 
 </ul>
 

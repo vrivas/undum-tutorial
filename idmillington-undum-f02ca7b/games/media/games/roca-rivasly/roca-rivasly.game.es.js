@@ -22,7 +22,7 @@ jQuery.fx.off=false
 undum.game.situations = {
     start: new undum.SimpleSituation(
 				"<h1>La puerta del castillo</h1>\
-				<p>Acabas de llegar a Roca Casterly.</p>", 
+				<p>Acabas de llegar a Roca Casterly.</p>",
 				{
 	        enter: function(character, system, from) {
 	            system.doLink('santoysenia');
@@ -52,7 +52,7 @@ undum.game.situations = {
 	<p>Ni que decir tiene, que los guardias pasan de ti y vuelven a su quehacer en el castillo.</p>\
 			<p>En fin... <a href='santoysenia'>puedes intentarlo de nuevo</a> o <a href='finalizar'>finalizar la partida</a>.</p>"
 		),
-		
+
 		finalizar: new undum.SimpleSituation(
 			"<h1>Fin de la historia</h1>\
 			<p>Pues así acaba tu historia en Roca Rivasly. Quizá, otro día, con más tiempo, decidas acabarla del todo</p>\
@@ -60,6 +60,7 @@ undum.game.situations = {
 		),
 		patiodearmas: new undum.SimpleSituation(
 			"<h1>El patio de armas</h1>\
+      <img class='img-situation' src='./media/img/patio-armas.jpg'>\
 			<p>Estás dentro del castillo, concretamente en el patio de armas</p>\
 			<p>Los guardias se han quedado más tranquilos al saber que sabes el santo y seña, así que se han ido a dormir... je, je, je...</p>\
 			<p>A tu izquierda, <a href='zonanoble'>puedes acceder a la zona noble del castillo</a>, \
@@ -84,7 +85,7 @@ undum.game.situations = {
 			}
 		),
 
-		zonanobleantorcha: new undum.SimpleSituation( 
+		zonanobleantorcha: new undum.SimpleSituation(
 					"<p>El insignificante error cometido por el arquitecto al no colocar ni una sola ventana\
 					no es problema para ti que te has procurado una antorcha.</p>\
 					<p class='transient'>Analizas la estancia y compruebas que existe una puerta en la pared norte\
@@ -208,13 +209,13 @@ undum.game.situations = {
 			amabilidad te invita <a href='calabozo'>a pudrirte en el calabozo</a>.</p>"
 				}
 			}
-			
-		),			
+
+		),
 		habnollave: new undum.SimpleSituation(
 			"<p><strong>¡¡Lástima que no tengas ninguna llave!!</strong></p>\
 			 <p>Pero una vez que has llegado hasta aquí, no vas a cejar en tu empeño por unos míseros gramos de metal.</p>\
 			<p class='transient'>Tras meditarlo unos instantes, decides que tus opciones son <a href='./llamar-puerta' class='once'>llamar a la puerta de la habitación</a>\
-			(en plan <a href='http://www.youtube.com/watch?v=5_swaxOidGU' class='raw' target='_new'>Bob Dylan</a>),\
+			(en plan <a href='https://www.youtube.com/watch?v=rnKbImRPhTE' class='raw' target='_new'>Bob Dylan</a>),\
 			<a href='./punta-lanza'  class='once'>probar a abrir la cerradura</a> con la punta de tu lanza</a> (cuentan las leyendas \
 			que una vez hace tiempo a alguien le funcionó), <a href='./empujar'  class='once'>dar un fuerte empujón a la puerta</a> cual si fueras Harry el sucio o <a href='aposentos'  class='once'>volver hacia atrás sin hacer ruido</a>.</p>",
 			{
@@ -294,10 +295,10 @@ undum.game.situations = {
 			teoría que aprendiste en clase de Programación Orientada a Objetos consiguiendo que tu bella dama caiga de nuevo \
 			en brazos de Morfeo... el cual a duras penas puede sujetarla. Mientras ella duerme, tú sales precipitadamente del castillo.</p>");
 						system.doLink( 'happyend' );
-					} 
+					}
 				}
 			}),
-		
+
 		happyend: new undum.SimpleSituation(
 			"<h1>Final feliz</h1>\
 			<p>Y así acaba esta caballeresca aventura: entraste al castillo, recuperaste los objetos necesarios y juraste tu amor \

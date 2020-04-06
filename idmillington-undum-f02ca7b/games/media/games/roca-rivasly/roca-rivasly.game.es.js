@@ -65,6 +65,11 @@ undum.game.situations = {
 			<p>Los guardias se han quedado más tranquilos al saber que sabes el santo y seña, así que se han ido a dormir... je, je, je...</p>\
 			<p>A tu izquierda, <a href='zonanoble'>puedes acceder a la zona noble del castillo</a>, \
 			mientras a la derecha observas que está <a href='caballerizas'>la entrada a las caballerizas</a>.</p>"
+      , {
+				enter: function( character, system, from ) {
+          $('body').css('background-image', 'url(./media/img/titulo.jpg)')
+        }
+      }
 		),
 		zonanoble: new undum.SimpleSituation(
 			"<h1>La zona noble del castillo</h1>\

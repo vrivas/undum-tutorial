@@ -80,6 +80,7 @@ undum.game.situations = {
 					if( character.qualities.antorcha ) {
 						system.doLink( "zonanobleantorcha" );
 					} else {
+            $('body').css('background-image', 'url(https://bangbranding.com/blog/wp-content/uploads/2016/11/350x500_destacada-1.jpg')
 						system.write( "<p>No obstante, existe un pequeño problema y es que el arquitecto \
 						en un intento por llevar a cabo la máxima expresión del minimalismo, \
 						minimizó todas las ventanas (vamos: que se olvidó poner ventanas en las paredes)\
@@ -97,6 +98,13 @@ undum.game.situations = {
 					<a href='aposentos'>que te lleva a los aposentos reales</a>.</p>\
 					<p class='transient'>Otra opción es pasar del tema, que ya se te va haciendo tarde y <a href='patiodearmas'>volver por donde\
 					has venido</a>.</p>"
+          , {
+    				enter: function( character, system, from ) {
+              $('body')
+                .css('background-image', 'url(https://media-cdn.tripadvisor.com/media/photo-s/06/55/90/7a/castillo-de-neuschwanstein.jpg)')
+                .css( 'background-size','cover')
+            }
+          }
 		),
 		caballerizas: new undum.SimpleSituation(
 			"<h1>Las caballerizas</h1>\
